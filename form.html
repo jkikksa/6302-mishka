@@ -33,11 +33,11 @@
     </header>
     <main>
       <form class="order-form" action="#" method="get">
-        <p class="order-form__description">
+        <div class="order-form__description">
           Мы будем рады воплотить в жизнь ваши пожелания!
           Заполните простую форму заказа и мы
           свяжемся с вами, чтобы уточнить детали.
-        </p>
+        </div>
         <fieldset class="order-form__type">
           <legend>Тип</legend>
           <p>
@@ -91,19 +91,19 @@
             <input type="text" name="order-patronymic" id="order-patronymic" placeholder="Отчество, если желаете" required>
           </p>
         </fieldset>
-        <fieldset class="order-form__tel">
-          <legend>Тел</legend>
+        <div class="telephone-field">
+          <div class="telephone-field__title">Тел</div>
           <input type="tel" name="order-tel" id="order-tel" pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" placeholder="+7 ХХХ ХХ ХХ" required>
-        </fieldset>
-        <fieldset class="order-form__email">
-          <legend>E-mail</legend>
+        </div>
+        <div class="email-field">
+          <div class="emeil-field__title">E-mail</div>
           <input type="email" name="order-email" id="order-email" placeholder="Ваш Email" required>
-        </fieldset>
-        <fieldset class="order-form__additional">
-          <legend>Доп</legend>
+        </div>
+        <div class="textarea-field">
+          <div class="textarea-field__title">Доп</div>
           <textarea name="order-additional" rows="8" cols="30" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
-        </fieldset>
-        <p class="order-form__requirement-text">Все поля обязательны для заполнения</p>
+        </div>
+        <div class="order-form__requirement-text">Все поля обязательны для заполнения</div>
         <input type="submit" value="Отправить заказ">
       </form>
     </main>
