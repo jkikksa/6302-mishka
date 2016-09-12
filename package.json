@@ -14,17 +14,17 @@
   "homepage": "https://github.com/htmlacademy-adaptive/6302-mishka",
   "devDependencies": {
     "autoprefixer": "6.4.1",
-    "grunt": "1.0.1",
-    "grunt-browser-sync": "2.2.0",
-    "grunt-contrib-less": "1.4.0",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-postcss": "0.8.0",
+    "browser-sync": "2.15.0",
+    "gulp": "3.9.1",
+    "gulp-less": "3.1.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.2.0",
     "@htmlacademy/editorconfig-cli": "0.0.7"
   },
   "scripts": {
     "test": "editorconfig-cli",
-    "build": "grunt less && grunt postcss",
-    "start": "npm run build && grunt serve"
+    "build": "gulp style",
+    "start": "gulp serve"
   },
   "editorconfig-cli": [
     "*.html",
