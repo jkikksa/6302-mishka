@@ -1,11 +1,27 @@
 .user-block {
   .style-reset();
+  @media (min-width: @screen-tablet) {
+    display: flex;
+  }
 }
 .user-block__cart {
   .inner();
   border-bottom: 1px solid #ececec;
 }
+.user-block__search {
+  .inner();
+  border-bottom: 1px solid #ececec;
+}
 .user-block__cart-link {
+  font-size: 17px;
+  line-height: 24px;
+  color: @text-color--dark;
+  font-weight: @font-weight--bold;
+  padding: 20px;
+  display: block;
+  text-align: center;
+}
+.user-block__search-link {
   font-size: 17px;
   line-height: 24px;
   color: @text-color--dark;

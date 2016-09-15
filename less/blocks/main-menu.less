@@ -1,9 +1,15 @@
 .main-menu {
   position: absolute;
   background-color: rgba(255,255,255,0.5);
-  width: 100%;
   box-sizing: border-box;
   display: none;
+  width: 100%;
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    position: static;
+  }
 }
 .main-menu--show {
   display: block;
@@ -11,6 +17,9 @@
 
 .main-menu__list {
   .style-reset();
+  @media (min-width: @screen-tablet) {
+    display: flex;
+  }
 }
 .main-menu__list-item {
 
