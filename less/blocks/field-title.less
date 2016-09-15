@@ -1,0 +1,20 @@
+.field-title {
+  width: 100%;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: @font-weight--bold;
+  color: @aqua;
+  position: absolute;
+  left: 0;
+  top: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 200px;
+    height: 1px;
+    background-color: #62d1ba;
+  }
+}

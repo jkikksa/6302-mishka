@@ -1,0 +1,113 @@
+// Тут будут собраны основные стили для глобальных блоков.
+@font-face {
+  font-family: "OpenSans";
+  src: url("../../fonts/opensans.woff2") format("woff2"),
+       url("../../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../../fonts/opensansbold.woff2") format("woff2"),
+       url("../../fonts/opensansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: @font-family;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+  color: @text-color;
+  width: 320px;
+  // min-width: 320px;
+  // max-width: 480px; // для удобства, потом удалить
+  .center-block();
+  background-color: rgba(0, 0, 255, 0.05); //для наглядности потом удалить
+
+}
+
+a {
+  color: @link-color;
+  text-decoration: @link-text-decoration;
+  &:hover {
+    color: @link-color--hover;
+    text-decoration: @link-text-decoration--hover;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  padding: 15px 0;
+  &::-webkit-input-placeholder { // потом поменять под автопрефиксер
+    font-weight: @font-weight;
+    color: fade(@gray, 70%);
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #444444;
+  }
+}
+input[type="checkbox"]:checked + label {
+
+  &::before {
+
+    background-image: data-uri("../../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: "";
+    position: absolute;
+    left: -60px + 2px; // 2px разницы т.к. внешний круг это тень
+    top: 0;
+    box-shadow: 0 0 0 2px #444444;
+    width: 16px;
+    height: 16px;
+    border: 10px solid white;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+
+}
+input[type="radio"]:checked + label {
+  &::after {
+    background-color: #62d1ba;
+  }
+
+}

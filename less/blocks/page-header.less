@@ -1,0 +1,40 @@
+.page-header {
+  background-color: white;
+  //для наглядности, потом удалить!
+  padding-bottom: 20px;
+  position: relative;
+  .center-block();
+  }
+.page-header__inner {
+  // похоже на мобильной версии тут будет пусто
+}
+.page-header__logo {
+  display: block;
+  img {
+    display: block;
+    .center-block();
+  }
+}
+
+.page-header__links-list {
+  .style-reset();
+}
+
+.page-header__link {
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: @text-color--light;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: @font-weight--bold;
+  text-decoration: none;
+  .inner();
+  &--interior {
+    background-color: #63d1bb;
+  }
+  &--toys {
+    background-color: #56c3b2;
+  }
+
+}
