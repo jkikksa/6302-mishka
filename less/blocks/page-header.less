@@ -1,16 +1,15 @@
 .page-header {
-  .center-block();
   background-color: white;
   //для наглядности, потом удалить!
   padding-bottom: 20px;
-  position: relative;
 
 
   }
 .page-header__inner {
+  position: relative;
   // похоже на мобильной версии тут будет пусто
-  .set-width();
-  max-width: 1150px;
+  .container();
+  // max-width: 1150px;
   outline: 1px dashed red;
   @media (max-width: @screen-tablet) {
     padding-left: 0;
@@ -22,6 +21,9 @@
   img {
     display: block;
     .center-block();
+  }
+  @media (min-width: @screen-tablet) {
+    position: absolute;
   }
 }
 
@@ -45,7 +47,8 @@
   line-height: 24px;
   font-weight: @font-weight--bold;
   text-decoration: none;
-  .inner();
+  padding-left: @padding-inner-mobile;
+  padding-right: @padding-inner-mobile;
   &--interior {
     background-color: #63d1bb;
   }

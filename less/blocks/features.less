@@ -6,7 +6,8 @@
   padding: 20px 0;
 }
 .features__inner {
-  .inner();
+  .container();
+  outline: 2px dashed red;
 }
 
 .features__title {
@@ -18,6 +19,11 @@
 
 .features__list {
   .style-reset();
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .features__list-item {
@@ -25,4 +31,7 @@
   font-size: 17px;
   line-height: normal;
   font-weight: @font-weight--bold;
+  @media (min-width: @screen-tablet) {
+    width: 200px;
+  }
 }
