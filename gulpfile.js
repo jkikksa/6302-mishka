@@ -6,6 +6,7 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var csscomb = require('gulp-csscomb');
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -22,6 +23,12 @@ gulp.task("style", function() {
     ]))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
+});
+
+gulp.task('comb', function() {
+  return gulp.src('less/blocks/*.less')
+    .pipe(csscomb())
+    .pipe(gulp.dest('./less/blocks'));
 });
 
 gulp.task("serve", ["style"], function() {
