@@ -1,6 +1,7 @@
 .product-item {
   margin-bottom: 20px;
 }
+
 .product-item__wrapper {
   border: 1px solid #ededed;
   padding-left: 8.4375%;
@@ -12,26 +13,26 @@
   border-top: 1px solid #ededed;
   display: flex;
   justify-content: space-between;
-
 }
-.product-item__link {
 
-}
 .product-item__image {
   display: block;
   width: 100%;
   height: auto;
 }
+
 .product-item__title {
   font-size: 17px;
   line-height: 24px;
   color: @text-color--dark;
   font-weight: @font-weight--bold;
 }
+
 .product-item__description {
   font-size: 13px;
   line-height: 30px;
 }
+
 .product-item__price {
   margin: 0;
   font-size: 15px;
@@ -39,8 +40,9 @@
   color: @text-color--dark;
   font-weight: @font-weight--bold;
 }
+
 .product-item__buy {
-  font-size: 0;
+  .visually-hidden();
   display: block;
   width: 24px;
   height: 24px;

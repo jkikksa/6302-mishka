@@ -5,9 +5,11 @@
   position: relative;
   .center-block();
   }
+
 .page-header__inner {
   // похоже на мобильной версии тут будет пусто
 }
+
 .page-header__logo {
   display: block;
   img {
@@ -21,6 +23,7 @@
 }
 
 .page-header__link {
+  .inner();
   display: block;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -29,10 +32,11 @@
   line-height: 24px;
   font-weight: @font-weight--bold;
   text-decoration: none;
-  .inner();
+
   &--interior {
     background-color: #63d1bb;
   }
+
   &--toys {
     background-color: #56c3b2;
   }

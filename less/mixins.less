@@ -1,3 +1,28 @@
-@import "mixins/style-reset.less";
-@import "mixins/center-block.less";
-@import "mixins/inner.less";
+.style-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+}
+
+.center-block() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inner() {
+  padding-left: @padding-inner;
+  padding-right: @padding-inner;
+}
+.visually-hidden() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
