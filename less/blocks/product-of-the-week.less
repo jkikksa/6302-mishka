@@ -1,17 +1,39 @@
 .product-of-the-week {
-  background-color: white;
-  //для наглядности, потом удалить!
-
   padding: 40px 0;
 }
 .product-of-the-week__inner {
   .container();
+  outline: 2px dashed blue;
+  @media (min-width: @screen-desktop) {
+    padding-left: 225px;
+    width: @screen-desktop - 275px;
+  }
+}
+.product-of-the-week__content-wrapper {
+  outline: 1px dashed green;
+  position: relative;
+  @media (min-width: @screen-tablet) {
+    padding: 20px;
+    padding-bottom: 100px;
+    padding-right: 380px;
+  }
+  @media (min-width: @screen-desktop) {
+    padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 585px;
+  }
 }
 .product-of-the-week__title {
   font-size: 25px;
   line-height: 30px;
   color: @text-color--dark;
   font-weight: @font-weight--bold;
+  @media (min-width: @screen-desktop) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 0;
+  }
 }
 .product-of-the-week__marker {
   font-size: 17px;
@@ -22,9 +44,21 @@
 }
 .product-of-the-week__product-image {
   display: block;
-  width: 100%;
-  height: auto;
-  .center-block();
+  width: 260px;
+  height: 315px;
+  @media (min-width: @screen-tablet) {
+    width: 333px;
+    height: 404px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  @media (min-width: @screen-desktop) {
+    width: 525px;
+    height: 636px;
+    top: -100px;
+    z-index: -1;
+  }
 }
 .product-of-the-week__product-price {
   font-size: 17px;

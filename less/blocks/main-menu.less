@@ -10,11 +10,23 @@
     justify-content: flex-end;
     position: relative;
   }
+  @media (min-width: @screen-desktop) {
+    justify-content: space-between;
+  }
 }
 .main-menu--show {
   display: block;
 }
 
+.main-menu__aux-menu {
+  display: none;
+  @media (min-width: @screen-desktop) {
+    position:absolute;
+    display: flex;
+    left: 0;
+    top: 100px;
+  }
+}
 .main-menu__list {
   .style-reset();
   @media (min-width: @screen-tablet) {
@@ -23,9 +35,12 @@
     left: 0;
     top: 100px;
   }
+  @media (min-width: @screen-desktop) {
+    position: static;
+  }
 }
 .main-menu__list-item {
-
+  outline: 1px dashed red;
 }
 .main-menu__link {
   .inner();
