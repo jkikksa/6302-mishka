@@ -1,13 +1,15 @@
 .catalog {
-  background-color: white;
-  //для наглядности, потом удалить!
-
-
   padding: 20px 0;
 }
 .catalog__inner {
-  .inner();
+  .container();
+  outline: 2px dashed red;
+  @media (min-width: @screen-desktop) {
+    display: flex;
+    justify-content: space-between;
+    }
 }
 .catalog__title {
   font-size: 0;
+  display: none;
 }

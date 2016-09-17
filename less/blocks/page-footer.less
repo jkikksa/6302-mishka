@@ -1,8 +1,19 @@
 .page-footer {
   padding: 20px 0;
+  background-color: #f1f1f1;
 }
 .page-footer__inner {
   .container();
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.page-footer__logo {
+  display: none;
+  @media (min-width: @screen-tablet) {
+    display: block;
+  }
 }
 .page-footer__copyright {
   font-size: 18px;

@@ -6,29 +6,12 @@
   position: relative;
   outline: 2px dashed green;
   @media (max-width: @screen-tablet) {
+    width: @screen-mobile;
     padding-left: 0;
     padding-right: 0;
-    width: @screen-mobile;
   }
 }
-.page-header__logo {
-  display: block;
 
-  img {
-    display: block;
-    .center-block();
-  }
-
-  @media (min-width: @screen-tablet) {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    z-index: 2;
-  }
-  @media (min-width: @screen-desktop) {
-    left: 50%;
-  }
-}
 
 .page-header__links-list {
   .style-reset();
