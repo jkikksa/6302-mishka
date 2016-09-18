@@ -19,7 +19,7 @@ body {
   font-family: @font-family;
   font-size: @font-size;
   line-height: @line-height;
-  font-weight: @font-weight;
+  font-weight: 400;
   color: @text-color;
 }
 
@@ -47,11 +47,6 @@ input[type="tel"] {
   border-bottom: 2px solid black;
   outline: none;
   padding: 15px 0;
-
-  &::-webkit-input-placeholder { // потом поменять под автопрефиксер
-    font-weight: @font-weight;
-    color: fade(@gray, 70%);
-  }
 }
 
 input[type="checkbox"] {
