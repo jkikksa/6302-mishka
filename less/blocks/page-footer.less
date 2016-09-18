@@ -1,6 +1,6 @@
 .page-footer {
   padding: 20px 0;
-  background-color: #f1f1f1;
+  background-color: @gray-95;
 }
 
 .page-footer__inner {
@@ -25,10 +25,10 @@
 }
 
 .page-footer__copyright-link {
-  .visually-hidden();
+  font-size: 0;
   display: inline-block;
   vertical-align: middle;
   width: 30px;
   height: 35px;
-  background-color: red;
+  outline: 1px dashed red; // временно для удобства
 }

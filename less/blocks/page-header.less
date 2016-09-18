@@ -5,7 +5,7 @@
 .page-header__inner {
   .container();
   position: relative;
-  outline: 2px dashed green;
+  outline: 2px dashed green; // временно для удобства
   @media (max-width: @screen-tablet) {
     width: @screen-mobile;
     padding-left: 0;
@@ -37,10 +37,10 @@
   padding-left: @padding-inner-mobile;
   padding-right: @padding-inner-mobile;
     &--interior {
-    background-color: #63d1bb;
+    background-color: @aqua;
     }
 
     &--toys {
-    background-color: #56c3b2;
+    background-color: @darkaqua;
     }
 }

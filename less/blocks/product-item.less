@@ -10,9 +10,9 @@
 }
 
 .product-item__wrapper {
-  border: 1px solid #ededed;
-  padding-left: 8.4375%; // Удалить
-  padding-right: 8.4375%; // удалить
+  border: 1px solid @gray-93;
+  padding-left: 27px; // отступ в карточке товара
+  padding-right: 27px;
   @media (min-width: @screen-tablet) {
     padding-left: 0;
     padding-right: 0;
@@ -27,7 +27,7 @@
 
 .product-item__buy-wrapper {
   padding: 10px 0;
-  border-top: 1px solid #ededed;
+  border-top: 1px solid @gray-93;
   display: flex;
   justify-content: space-between;
 }
@@ -70,9 +70,9 @@
 }
 
 .product-item__buy {
-  .visually-hidden();
+  font-size: 0;
   display: block;
   width: 24px;
   height: 24px;
-  background-color: red;
+  outline: 1px dashed red; // временно для удобства
 }
