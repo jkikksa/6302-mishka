@@ -19,7 +19,7 @@
   .style-reset();
   position: relative;
   margin-bottom: 20px;
-  padding-left: 60px; /// добавить этот отступ в переменные (после новых макетов)
+  padding-left: 60px;
   font-weight: 700;
   color: @text-color--dark;
 }
@@ -31,10 +31,6 @@
   padding-left: 60px;
   font-weight: 700;
   color: @text-color--dark;
-  // обдумать вариант разметки, предложенный наставником.
-  p {
-    margin-bottom: 30px;
-  }
 }
 
 .order-form__fullname {
@@ -44,6 +40,32 @@
   margin-bottom: 20px;
   font-weight: 700;
   color: @text-color--dark;
+}
+
+.order-form__telephone {
+  .style-reset();
+  position: relative;
+  padding: 20px 0;
+}
+
+.order-form__email {
+  .style-reset();
+  position: relative;
+  padding: 20px 0;
+}
+
+.order-form__additional {
+  .style-reset();
+  position: relative;
+  padding: 20px 0;
+
+  textarea {
+    padding: 15px;
+    font-size: 17px;
+    line-height: 18px;
+    border: 2px solid @gray-27;
+    resize: none;
+  }
 }
 
 .order-form__requirement-text {

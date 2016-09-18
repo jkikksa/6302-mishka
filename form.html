@@ -45,74 +45,74 @@
     <main>
       <form class="order-form" action="#" method="get">
         <div class="order-form__inner">
-          <div class="order-form__description">
+          <p class="order-form__description">
             Мы будем рады воплотить в жизнь ваши пожелания!
             Заполните простую форму заказа и мы
             свяжемся с вами, чтобы уточнить детали.
-          </div>
-          <fieldset class="order-form__type">
-            <legend class="field-title">Тип</legend>
-            <p>
+          </p>
+          <div class="field  order-form__type">
+            <div class="field__title">Тип</div>
+            <div class="field__wrapper">
               <input type="radio" name="order-type" id="radio-1" value="accessories" checked>
               <label for="radio-1">Аксессуар для интерьера</label>
-            </p>
-            <p>
+            </div>
+            <div class="field__wrapper">
               <input type="radio" name="order-type" id="radio-2" value="toy">
               <label for="radio-2">Детская игрушка</label>
-            </p>
-          </fieldset>
-          <fieldset class="order-form__color">
-            <legend class="field-title">Цвет</legend>
-            <p>
+            </div>
+          </div>
+          <div class="field  order-form__color">
+            <div class="field__title">Цвет</div>
+            <div class="field__wrapper">
               <input type="checkbox" name="white" id="checkbox-1" checked>
               <label for="checkbox-1">Белый</label>
-            </p>
-            <p>
+            </div>
+            <div class="field__wrapper">
               <input type="checkbox" name="gray" id="checkbox-2" checked>
               <label for="checkbox-2">Серый</label>
-            </p>
-            <p>
+            </div>
+            <div class="field__wrapper">
               <input type="checkbox" name="tiffani" id="checkbox-3">
               <label for="checkbox-3">«Тиффани»</label>
-            </p>
-            <p>
+            </div>
+            <div class="field__wrapper">
               <input type="checkbox" name="black" id="checkbox-4">
               <label for="checkbox-4">Черный</label>
-            </p>
-            <p>
+            </div>
+            <div class="field__wrapper">
               <input type="checkbox" name="pink" id="checkbox-5">
               <label for="checkbox-5">Розовый</label>
-            </p>
-            <p>
+            </div>
+            <div class="field__wrapper">
               <input type="checkbox" name="orange" id="checkbox-6">
               <label for="checkbox-6">Оранжевый</label>
-            </p>
-          </fieldset>
-          <fieldset class="order-form__fullname">
-            <legend class="field-title">ФИО</legend>
-            <p>
+            </div>
+          </div>
+          <div class="field  order-form__fullname">
+            <div class="field__title">ФИО</div>
+            <div class="field__wrapper">
               <label for="order-name">Имя: </label>
               <input type="text" name="order-name" id="order-name" placeholder="Введите ваше имя" required>
-            </p>
-            <p>
+            </div>
+            <div class="field__wrapper">
               <label for="order-surname">Фамилия: </label>
               <input type="text" name="order-surname" id="order-surname" placeholder="Укажите фамилию" required>
-            </p>
-            <p>
+            </div>
+            <div class="field__wrapper">
               <label for="order-patronymic">Отчество: </label>
               <input type="text" name="order-patronymic" id="order-patronymic" placeholder="Отчество, если желаете" required>
-            </p>
-          </fieldset>
-          <div class="telephone-field">
-            <div class="field-title  telephone-field__title">Тел</div>
+            </div>
+          </div>
+          <div class="field  order-form__telephone">
+            <div class="field__title">Тел</div>
             <input type="tel" name="order-tel" id="order-tel" pattern="+7s[0-9]{3}s[0-9]{3}s[0-9]{2}s[0-9]{2}" placeholder="+7 ХХХ ХХ ХХ" required>
           </div>
-          <div class="email-field">
-            <div class="field-title  emeil-field__title">E-mail</div>
+          <div class="field  order-form__email">
+            <div class="field__title">E-mail</div>
             <input type="email" name="order-email" id="order-email" placeholder="Ваш Email" required>
           </div>
-          <div class="textarea-field">
-            <div class="field-title  textarea-field__title">Доп</div>
+          <div class="field  order-form__additional">
+            <div class="field__title">Доп</div>
             <textarea name="order-additional" rows="5" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
           </div>
           <div class="order-form__requirement-text">Все поля обязательны для заполнения</div>

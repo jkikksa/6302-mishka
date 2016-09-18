@@ -1,4 +1,8 @@
-.field-title {
+.field {
+  padding-top: 30px;
+}
+
+.field__title {
   position: absolute;
   top: 0;
   left: 0;
@@ -8,6 +12,7 @@
   line-height: 16px;
   color: @aqua;
   text-transform: uppercase;
+  margin-bottom: 20px;
 
   &::after {
     content: "";
@@ -18,4 +23,8 @@
     height: 1px;
     background-color: @aqua;
   }
+}
+
+.field__wrapper {
+  margin-bottom: 30px;
 }
