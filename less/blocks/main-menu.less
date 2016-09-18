@@ -1,13 +1,14 @@
 .main-menu {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
   // position: absolute;
   background-color: rgba(255,255,255,0.5);  //прозрачный фон для открытого меню для удобства
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
+
   @media (min-width: @screen-tablet) {
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
   // @media (min-width: @screen-desktop) {
   //   justify-content: space-between;
@@ -20,32 +21,36 @@
 
 .main-menu__aux-menu {
   display: none;
+
   @media (min-width: @screen-desktop) {
     display: flex;
   }
 }
+
 .main-menu__logo {
   display: block;
   width: 300px;
 
   img {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
-
 }
+
 .main-menu__list {
   .style-reset();
+
   @media (min-width: @screen-tablet) {
     display: flex;
-    order: 1;
     flex-shrink: 0;
+    order: 1;
   }
+
   @media (min-width: @screen-desktop) {
+    flex-wrap: wrap;
     order: -1;
     width: 400px;
-    flex-wrap: wrap;
   }
   // @media (min-width: @screen-desktop) {
   //   position: static;
@@ -57,20 +62,20 @@
 }
 
 .main-menu__link {
-  padding-left: @padding-inner-mobile;
+  display: block;
+  padding-top: 20px;
   padding-right: @padding-inner-mobile;
+  padding-bottom: 20px;
+  padding-left: @padding-inner-mobile;
+  font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  color: @text-color--dark;
-  font-weight: 700;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: block;
   text-align: center;
+  color: @text-color--dark;
   border-bottom: 1px solid @gray-93;
-  @media (min-width: @screen-desktop) {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
+  @media (min-width: @screen-desktop) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

@@ -1,13 +1,15 @@
 .slider-controls {
   display: flex;
+
   @media (min-width: @screen-tablet) {
     position: absolute;
     right: @padding-inner-tablet;
     bottom: 10px;
   }
 }
+
 .slider-controls__arrow {
+  flex-grow: 1;
   min-height: 50px;
   outline: 1px dashed red; // временно для удобства
-  flex-grow: 1;
 }

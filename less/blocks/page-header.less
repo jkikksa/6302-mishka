@@ -6,21 +6,23 @@
   .container();
   position: relative;
   outline: 2px dashed green; // временно для удобства
+
   @media (max-width: @screen-tablet) {
     width: @screen-mobile;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 }
 
-
 .page-header__links-list {
   .style-reset();
+
   @media (min-width: @screen-tablet) {
     display: flex;
     justify-content: space-between;
   }
 }
+
 .page-header__links-item {
   flex-grow: 1;
 }
@@ -28,19 +30,20 @@
 .page-header__link {
   display: block;
   padding-top: 40px;
+  padding-right: @padding-inner-mobile;
   padding-bottom: 40px;
-  color: @text-color--light;
+  padding-left: @padding-inner-mobile;
+  font-weight: 700;
   font-size: 19px;
   line-height: 24px;
-  font-weight: 700;
+  color: @text-color--light;
   text-decoration: none;
-  padding-left: @padding-inner-mobile;
-  padding-right: @padding-inner-mobile;
-    &--interior {
-    background-color: @aqua;
-    }
 
-    &--toys {
+  &--interior {
+    background-color: @aqua;
+  }
+
+  &--toys {
     background-color: @darkaqua;
-    }
+  }
 }

@@ -1,8 +1,10 @@
 .product-item {
   margin-bottom: 20px;
+
   @media (min-width: @screen-tablet) {
     display: flex;
   }
+
   @media (min-width: @screen-desktop) {
     display: block;
     width: 315px;
@@ -10,15 +12,17 @@
 }
 
 .product-item__wrapper {
-  border: 1px solid @gray-93;
-  padding-left: 27px; // отступ в карточке товара
   padding-right: 27px;
+  padding-left: 27px; // отступ в карточке товара
+  border: 1px solid @gray-93;
+
   @media (min-width: @screen-tablet) {
-    padding-left: 0;
-    padding-right: 0;
     width: 334px;
     height: 334px;
+    padding-right: 0;
+    padding-left: 0;
   }
+
   @media (min-width: @screen-desktop) {
     width: auto;
     height: auto;
@@ -26,23 +30,26 @@
 }
 
 .product-item__buy-wrapper {
-  padding: 10px 0;
-  border-top: 1px solid @gray-93;
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid @gray-93;
 }
 
 .product-item__image-link {
+
   @media (min-width: @screen-tablet) {
     display: block;
     width: 334px;
     height: 334px;
   }
+
   @media (min-width: @screen-desktop) {
     width: auto;
     height: auto;
   }
 }
+
 .product-item__image {
   display: block;
   width: 100%;
@@ -50,10 +57,10 @@
 }
 
 .product-item__title {
+  font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: @text-color--dark;
-  font-weight: 700;
 }
 
 .product-item__description {
@@ -63,16 +70,16 @@
 
 .product-item__price {
   margin: 0;
+  font-weight: 700;
   font-size: 15px;
   line-height: 24px;
   color: @text-color--dark;
-  font-weight: 700;
 }
 
 .product-item__buy {
-  font-size: 0;
   display: block;
   width: 24px;
   height: 24px;
+  font-size: 0;
   outline: 1px dashed red; // временно для удобства
 }

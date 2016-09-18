@@ -5,44 +5,49 @@
 .product-of-the-week__inner {
   .container();
   outline: 2px dashed blue; // временно для удобства
+
   @media (min-width: @screen-desktop) {
-    padding-left: 225px;
     width: @screen-desktop - 275px;
+    padding-left: 225px;
   }
 }
+
 .product-of-the-week__content-wrapper {
-  outline: 1px dashed green; // временно для удобства
   position: relative;
+  outline: 1px dashed green; // временно для удобства
+
   @media (min-width: @screen-tablet) {
     padding: 20px;
-    padding-bottom: 100px;
     padding-right: 380px;
+    padding-bottom: 100px;
   }
+
   @media (min-width: @screen-desktop) {
     padding: 20px;
     padding-top: 100px;
-    padding-bottom: 100px;
     padding-right: 585px;
+    padding-bottom: 100px;
   }
 }
 
 .product-of-the-week__title {
+  font-weight: 700;
   font-size: 25px;
   line-height: 30px;
   color: @text-color--dark;
-  font-weight: 700;
+
   @media (min-width: @screen-desktop) {
+    margin-bottom: 0;
     font-size: 53px;
     line-height: 57px;
-    margin-bottom: 0;
   }
 }
 
 .product-of-the-week__marker {
+  font-weight: 700;
   font-size: 17px;
   line-height: 16px;
   color: @aqua;
-  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -50,24 +55,26 @@
   display: block;
   width: 260px;
   height: 315px;
-  @media (min-width: @screen-tablet) {
-    width: 333px;
-    height: 404px;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  @media (min-width: @screen-desktop) {
-    width: 525px;
-    height: 636px;
-    top: -100px;
-    z-index: -1;
-  }
+
+    @media (min-width: @screen-tablet) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 333px;
+      height: 404px;
+    }
+
+    @media (min-width: @screen-desktop) {
+      top: -100px;
+      z-index: -1;
+      width: 525px;
+      height: 636px;
+    }
 }
 
 .product-of-the-week__product-price {
+  font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  font-weight: 700;
   text-align: center;
 }

@@ -5,30 +5,33 @@
 
 .page-footer__inner {
   .container();
+
   @media (min-width: @screen-tablet) {
     display: flex;
     justify-content: space-between;
   }
 }
+
 .page-footer__logo {
   display: none;
+
   @media (min-width: @screen-tablet) {
     display: block;
   }
 }
 
 .page-footer__copyright {
+  font-weight: 700;
   font-size: 18px;
   line-height: 19px;
   color: @text-color--dark;
-  font-weight: 700;
 }
 
 .page-footer__copyright-link {
-  font-size: 0;
   display: inline-block;
-  vertical-align: middle;
   width: 30px;
   height: 35px;
+  font-size: 0;
+  vertical-align: middle;
   outline: 1px dashed red; // временно для удобства
 }

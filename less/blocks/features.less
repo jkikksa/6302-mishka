@@ -8,14 +8,15 @@
 }
 
 .features__title {
+  font-weight: 700;
   font-size: 25px;
   line-height: 30px;
   color: @text-color--dark;
-  font-weight: 700;
 }
 
 .features__list {
   .style-reset();
+
   @media (min-width: @screen-tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -25,12 +26,14 @@
 
 .features__list-item {
   padding: 40px 0;
+  font-weight: 700;
   font-size: 17px;
   line-height: 1.2;
-  font-weight: 700;
+
   @media (min-width: @screen-tablet) {
     width: 200px;
   }
+  
   @media (min-width: @screen-desktop) {
     width: 350px;
   }

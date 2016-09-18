@@ -6,13 +6,16 @@
   .container();
   position: relative;
   outline: 2px dashed blue; // временно для удобства
+
   @media (min-width: @screen-tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 }
+
 .reviews__title {
+
   @media (min-width: @screen-tablet) {
     order: -2;
   }
@@ -27,6 +30,7 @@
 }
 
 .reviews__reviewer-info {
+
   @media (min-width: @screen-tablet) {
     width: 350px;
   }
@@ -34,10 +38,10 @@
 
 .reviews__reviewer-name {
   display: block;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: @text-color--dark;
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -49,6 +53,7 @@
 }
 
 .reviews__write-review {
+
   @media (min-width: @screen-tablet) {
     order: -1;
     margin: 0;
