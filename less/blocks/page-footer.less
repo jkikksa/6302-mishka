@@ -1,11 +1,20 @@
 .page-footer {
-  background-color: #f1f1f1;
-  //для наглядности, потом удалить!
   padding: 20px 0;
+  background-color: #f1f1f1;
 }
 
 .page-footer__inner {
-  .inner();
+  .container();
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.page-footer__logo {
+  display: none;
+  @media (min-width: @screen-tablet) {
+    display: block;
+  }
 }
 
 .page-footer__copyright {

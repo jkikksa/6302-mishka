@@ -1,11 +1,21 @@
 .reviews {
-  background-color: white;
-  //для наглядности, потом удалить!
   padding: 20px 0;
 }
 
 .reviews__inner {
-  .inner();
+  .container();
+  position: relative;
+  outline: 2px dashed blue;
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.reviews__title {
+  @media (min-width: @screen-tablet) {
+    order: -2;
+  }
 }
 
 .reviews__list {
@@ -16,7 +26,14 @@
   margin: 0;
 }
 
+.reviews__reviewer-info {
+  @media (min-width: @screen-tablet) {
+    width: 350px;
+  }
+}
+
 .reviews__reviewer-name {
+  display: block;
   font-size: 18px;
   line-height: 24px;
   color: @text-color--dark;
@@ -25,9 +42,17 @@
 }
 
 .reviews__reviewer-id {
+  display: block;
   font-size: 18px;
   line-height: 30px;
   font-style: normal;
+}
+
+.reviews__write-review {
+  @media (min-width: @screen-tablet) {
+    order: -1;
+    margin: 0;
+  }
 }
 
 .reviews__list-item {

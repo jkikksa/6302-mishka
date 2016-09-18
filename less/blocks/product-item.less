@@ -1,11 +1,28 @@
 .product-item {
   margin-bottom: 20px;
+  @media (min-width: @screen-tablet) {
+    display: flex;
+  }
+  @media (min-width: @screen-desktop) {
+    display: block;
+    width: 315px;
+  }
 }
 
 .product-item__wrapper {
   border: 1px solid #ededed;
-  padding-left: 8.4375%;
-  padding-right: 8.4375%;
+  padding-left: 8.4375%; // Удалить
+  padding-right: 8.4375%; // удалить
+  @media (min-width: @screen-tablet) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 334px;
+    height: 334px;
+  }
+  @media (min-width: @screen-desktop) {
+    width: auto;
+    height: auto;
+  }
 }
 
 .product-item__buy-wrapper {
@@ -15,10 +32,21 @@
   justify-content: space-between;
 }
 
+.product-item__image-link {
+  @media (min-width: @screen-tablet) {
+    display: block;
+    width: 334px;
+    height: 334px;
+  }
+  @media (min-width: @screen-desktop) {
+    width: auto;
+    height: auto;
+  }
+}
 .product-item__image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .product-item__title {

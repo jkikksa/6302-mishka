@@ -1,29 +1,31 @@
 .page-header {
-  background-color: white;
-  //для наглядности, потом удалить!
   padding-bottom: 20px;
-  position: relative;
-  .center-block();
-  }
+}
 
 .page-header__inner {
-  // похоже на мобильной версии тут будет пусто
-}
-
-.page-header__logo {
-  display: block;
-  img {
-    display: block;
-    .center-block();
+  .container();
+  position: relative;
+  outline: 2px dashed green;
+  @media (max-width: @screen-tablet) {
+    width: @screen-mobile;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
+
 
 .page-header__links-list {
   .style-reset();
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.page-header__links-item {
+  flex-grow: 1;
 }
 
 .page-header__link {
-  .inner();
   display: block;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -32,13 +34,13 @@
   line-height: 24px;
   font-weight: @font-weight--bold;
   text-decoration: none;
-
-  &--interior {
+  padding-left: @padding-inner-mobile;
+  padding-right: @padding-inner-mobile;
+    &--interior {
     background-color: #63d1bb;
-  }
+    }
 
-  &--toys {
+    &--toys {
     background-color: #56c3b2;
-  }
-
+    }
 }
