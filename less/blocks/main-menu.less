@@ -1,22 +1,11 @@
 .main-menu {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  // position: absolute;
-  background-color: rgba(255,255,255,0.5);  //прозрачный фон для открытого меню для удобства
+  position: relative;
 
   @media (min-width: @screen-tablet) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
-  // @media (min-width: @screen-desktop) {
-  //   justify-content: space-between;
-  // }
-}
-
-.main-menu--show {
-  display: block;
 }
 
 .main-menu__aux-menu {
@@ -31,7 +20,6 @@
 
 .main-menu__logo {
   display: block;
-  width: 300px;
 
   img {
     display: block;
@@ -54,9 +42,6 @@
     order: -1;
     width: 400px;
   }
-  // @media (min-width: @screen-desktop) {
-  //   position: static;
-  // }
 }
 
 .main-menu__list-item {
@@ -79,5 +64,59 @@
   @media (min-width: @screen-desktop) {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+.main-menu__toggler {
+  position: absolute;
+  font-size: 0;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 0 0;
+
+  @media (min-width: @screen-tablet) {
+    display: none;
+  }
+}
+
+// Условия только для мобильных разрешений
+@media (max-width: (@screen-tablet - 1px)) {
+
+  .main-menu--closed  .main-menu__toggler {
+    right: 30px;
+    top: 10px;
+    width: 20px;
+    height: 14px;
+    background-image: url("../img/icon-menu-open.svg");
+  }
+
+  .main-menu--opened  .main-menu__toggler {
+    right: 30px;
+    top: 5px;
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-menu-close.svg");
+  }
+
+  .main-menu--closed  .main-menu__list,
+  .main-menu--closed  .user-block {
+    display: none;
+  }
+
+  .main-menu--opened {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .main-menu--opened  .main-menu__list,
+  .main-menu--opened  .user-block {
+    display: block;
+    background-color: fade(@white, 80%); // временно для удобства
   }
 }

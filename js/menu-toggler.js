@@ -1,9 +1,14 @@
-var toggler = document.querySelector(".menu-toggler");
+var toggler = document.querySelector(".main-menu__toggler");
 var menu = document.querySelector(".main-menu");
 
-toggler.addEventListener("click", function (event) {
+toggler.addEventListener("click", function(event) {
   event.preventDefault();
-  menu.classList.toggle("main-menu--show");
-  toggler.classList.toggle("menu-toggler--opened");
-
-});
+  if (menu.classList.contains("main-menu--closed")) {
+    menu.classList.add("main-menu--opened");
+    menu.classList.remove("main-menu--closed");
+  }
+  else {
+    menu.classList.add("main-menu--closed");
+    menu.classList.remove("main-menu--opened");
+  }
+})
