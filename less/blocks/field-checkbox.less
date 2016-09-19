@@ -1,8 +1,13 @@
-.field {
+.field-checkbox {
+  position: relative;
+  margin-bottom: 20px;
   padding-top: 30px;
+  font: inherit;
+  font-weight: 700;
+  color: @text-color--dark;
 }
 
-.field__title {
+.field-checkbox__title {
   position: absolute;
   top: 0;
   left: 0;
@@ -14,6 +19,7 @@
   text-transform: uppercase;
   margin-bottom: 20px;
 
+  // вынести в примесь!
   &::after {
     content: "";
     position: absolute;
@@ -25,6 +31,6 @@
   }
 }
 
-.field__wrapper {
+.field-checkbox__wrapper {
   margin-bottom: 30px;
 }

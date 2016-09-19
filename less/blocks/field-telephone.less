@@ -1,0 +1,32 @@
+.field-telephone {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  font: inherit;
+  font-weight: 700;
+  color: @text-color--dark;
+}
+
+.field-telephone__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: @aqua;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  // вынести в примесь!
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 200px;
+    height: 1px;
+    background-color: @aqua;
+  }
+}
