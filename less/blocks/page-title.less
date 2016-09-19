@@ -1,7 +1,27 @@
 .page-title {
+  background-color: @gray-98;
+}
+
+.page-title__inner {
+  .container();
+  outline: 2px dashed blue;
   padding-top: 70px;
-  padding-right: @padding-inner-mobile;
-  padding-bottom: 120px;
-  padding-left: @padding-inner-mobile;
-  text-align: center;
+  padding-bottom: 110px;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // @media (max-width: (@screen-tablet - 1px)) {
+  //   width: @screen-mobile;
+  //   padding-right: 0;
+  //   padding-left: 0;
+  // }
+}
+
+.page-title__text {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  color: @text-color--dark;
+  margin: 0;
 }

@@ -1,0 +1,48 @@
+.page-links {
+  background-color: @gray-98;
+}
+
+.page-links__inner {
+  .container();
+  outline: 2px dashed green;
+
+  @media (max-width: (@screen-tablet - 1px)) {
+    width: @screen-mobile;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.page-links__links-list {
+  .style-reset();
+
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-links__links-item {
+  flex-grow: 1;
+}
+
+.page-links__link {
+  display: block;
+  padding-top: 40px;
+  padding-right: @padding-inner-mobile;
+  padding-bottom: 40px;
+  padding-left: @padding-inner-mobile;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: @text-color--light;
+  text-decoration: none;
+
+  &--interior {
+    background-color: @aqua;
+  }
+
+  &--toys {
+    background-color: @darkaqua;
+  }
+}
