@@ -37,3 +37,17 @@
   padding: 0;
   border: 0;
 }
+
+// Эта примесь добавляет декоративную полоску в заголовке полей формы
+.decor-line() {
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 200px;
+    height: 1px;
+    background-color: @aqua;
+  }
+}

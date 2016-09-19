@@ -8,6 +8,7 @@
 }
 
 .field-radio__title {
+  .decor-line();
   position: absolute;
   top: 0;
   left: 0;
@@ -18,17 +19,6 @@
   color: @aqua;
   text-transform: uppercase;
   margin-bottom: 20px;
-
-  // вынести в примесь!
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 200px;
-    height: 1px;
-    background-color: @aqua;
-  }
 }
 
 .field-radio__wrapper {
