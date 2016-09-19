@@ -38,7 +38,8 @@
   border: 0;
 }
 
-// Эта примесь добавляет декоративную полоску в заголовке полей формы
+// Эта примесь добавляет декоративную полоску
+// в заголовке полей формы на мобильных разрешениях
 .decor-line() {
 
   &::after {
@@ -49,5 +50,15 @@
     width: 200px;
     height: 1px;
     background-color: @aqua;
+  }
+
+  @media (min-width: @screen-tablet) {
+
+    &::after {
+      content: normal;
+      width: 0;
+      height: 0;
+      background-color: transparent;
+    }
   }
 }

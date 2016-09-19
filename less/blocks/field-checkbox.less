@@ -5,6 +5,12 @@
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
+
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    padding-left: 200px;
+    flex-wrap: wrap;
+  }
 }
 
 .field-checkbox__title {
@@ -18,9 +24,19 @@
   line-height: 16px;
   color: @aqua;
   text-transform: uppercase;
-  margin-bottom: 20px;
+
+  @media (min-width: @screen-tablet) {
+    top: 40px;
+  }
 }
 
 .field-checkbox__wrapper {
   margin-bottom: 30px;
+
+  @media (min-width: @screen-tablet) {
+    width: 200px;
+  }
+  @media (min-width: @screen-desktop) {
+    width: 250px;
+  }
 }

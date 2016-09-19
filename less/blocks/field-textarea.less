@@ -6,6 +6,10 @@
   font-weight: 700;
   color: @text-color--dark;
 
+  @media (min-width: @screen-tablet) {
+    padding-left: 140px;
+  }
+
   textarea {
     padding: 15px;
     font-size: 17px;
@@ -27,5 +31,8 @@
   line-height: 16px;
   color: @aqua;
   text-transform: uppercase;
-  margin-bottom: 20px;
+
+  @media (min-width: @screen-tablet) {
+    top: 40px;
+  }
 }
