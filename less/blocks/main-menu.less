@@ -86,25 +86,23 @@
 // Условия только для мобильных разрешений
 @media (max-width: (@screen-tablet - 1px)) {
 
-  .main-menu--closed  .main-menu__toggler {
-    right: 30px;
-    top: 10px;
-    width: 20px;
-    height: 14px;
-    background-image: url("../img/icon-menu-open.svg");
-  }
+  .main-menu--closed {
 
-  .main-menu--opened  .main-menu__toggler {
-    right: 30px;
-    top: 5px;
-    width: 21px;
-    height: 21px;
-    background-image: url("../img/icon-menu-close.svg");
-  }
+    .main-menu__toggler {
+      right: 30px;
+      top: 10px;
+      width: 20px;
+      height: 14px;
+      background-image: url("../img/icon-menu-open.svg");
+    }
 
-  .main-menu--closed  .main-menu__list,
-  .main-menu--closed  .main-menu__user-list {
-    display: none;
+    .main-menu__list {
+      display: none;
+    }
+
+    .main-menu__user-list {
+      display: none;
+    }
   }
 
   .main-menu--opened {
@@ -112,11 +110,39 @@
     left: 0;
     top: 0;
     width: 100%;
+
+    .main-menu__toggler {
+      right: 30px;
+      top: 5px;
+      width: 21px;
+      height: 21px;
+      background-image: url("../img/icon-menu-close.svg");
+    }
+
+    .main-menu__list {
+      display: block;
+      background-color: fade(@white, 80%); // временно для удобства
+    }
+
+    .main-menu__user-list {
+      display: block;
+      background-color: fade(@white, 80%); // временно для удобства
+    }
   }
 
-  .main-menu--opened  .main-menu__list,
-  .main-menu--opened  .main-menu__user-list {
-    display: block;
-    background-color: fade(@white, 80%); // временно для удобства
+  .main-menu--no-js {
+    position: static;
+
+    .main-menu__list {
+      display: block;
+    }
+
+    .main-menu__user-list {
+      display: block;
+    }
+
+    .main-menu__toggler {
+      display: none;
+    }
   }
 }
