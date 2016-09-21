@@ -60,6 +60,11 @@
 
   &:hover {
     color: @text-color--light;
+
+    @media (min-width: @screen-tablet) {
+      padding-top: 25px;
+      padding-bottom: 35px;
+    }
   }
 
   &:active {
@@ -69,10 +74,24 @@
   &--interior {
     background-color: @aqua;
     background-image: url("../../img/icon-interior.svg");
+
+    &:hover {
+
+      @media (min-width: @screen-tablet) {
+        box-shadow: 0 5px 0 0 @aqua;
+      }
+    }
   }
 
   &--toys {
     background-color: @darkaqua;
     background-image: url("../../img/icon-toy.svg");
+
+    &:hover {
+
+      @media (min-width: @screen-tablet) {
+        box-shadow: 0 5px 0 0 @darkaqua;
+      }
+    }
   }
 }

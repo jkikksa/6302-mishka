@@ -1,10 +1,17 @@
 .product-of-the-week {
-  padding: 40px 0;
+  padding-top: 27px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid @gray-93;
+
+  @media (min-width: @screen-tablet) {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
 }
 
 .product-of-the-week__inner {
   .container();
-  outline: 2px dashed blue; // временно для удобства
+  position: relative;
 
   @media (min-width: @screen-desktop) {
     width: @screen-desktop - 275px;
@@ -14,12 +21,10 @@
 
 .product-of-the-week__content-wrapper {
   position: relative;
-  outline: 1px dashed green; // временно для удобства
+  // outline: 1px dashed green; // временно для удобства
 
   @media (min-width: @screen-tablet) {
-    padding: 20px;
-    padding-right: 380px;
-    padding-bottom: 100px;
+    padding-right: 378px;
   }
 
   @media (min-width: @screen-desktop) {
@@ -31,10 +36,18 @@
 }
 
 .product-of-the-week__title {
+  margin-top: 0;
+  margin-bottom: 7px;
   font-weight: 700;
   font-size: 25px;
   line-height: 1.2em;
   color: @text-color--dark;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 40px;
+    line-height: 1.25em;
+    margin-bottom: 50px;
+  }
 
   @media (min-width: @screen-desktop) {
     margin-bottom: 0;
@@ -49,12 +62,56 @@
   line-height: 0.941em;
   color: @aqua;
   text-transform: uppercase;
+  margin-bottom: 25px;
+
+  @media (min-width: @screen-tablet) {
+    position: absolute;
+    right: 60px;
+    top: 15px;
+    width: 80px;
+
+  }
+}
+
+.product-of-the-week__description {
+  font-size: 15px;
+  line-height: 1.6em;
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 17px;
+    line-height: 1.765;
+  }
+}
+
+.product-of-the-week__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 28px;
+
+  tr {
+    border-bottom: 1px solid @gray-93;
+  }
+
+  td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.product-of-the-week__table-parameter {
+  width: 98px;
 }
 
 .product-of-the-week__product-image {
-  display: block;
-  width: 260px;
-  height: 315px;
+  margin-bottom: 25px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 
   @media (min-width: @screen-tablet) {
     position: absolute;
@@ -77,4 +134,10 @@
   font-size: 17px;
   line-height: 1.411em;
   text-align: center;
+  margin-bottom: 28px;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 20px;
+    line-height: 1.2em;
+  }
 }
