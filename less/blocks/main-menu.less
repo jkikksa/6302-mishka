@@ -103,14 +103,20 @@
 
 .main-menu__toggler {
   position: absolute;
+  z-index: 9;
+  top: 10px;
+  right: 0;
   padding: 0;
   font-size: 0;
+  width: 90px;
+  height: 60px;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 0 0;
   border: none;
   outline: none;
   cursor: pointer;
+  outline: 1px dashed red;
 
   @media (min-width: @screen-tablet) {
     display: none;
@@ -121,11 +127,8 @@
 @media (max-width: (@screen-tablet - 1px)) {
   .main-menu--closed {
     .main-menu__toggler {
-      top: 31px;
-      right: 31px;
-      width: 20px;
-      height: 14px;
       background-image: url("../img/icon-menu-open.svg");
+      background-position: center center;
     }
 
     .main-menu__list {
@@ -144,11 +147,8 @@
     width: 100%;
 
     .main-menu__toggler {
-      top: 30px;
-      right: 29px;
-      width: 21px;
-      height: 21px;
       background-image: url("../img/icon-menu-close.svg");
+      background-position: center center;
     }
 
     .main-menu__list {
