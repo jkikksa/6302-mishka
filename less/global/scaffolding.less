@@ -24,12 +24,17 @@ body {
 }
 
 a {
-  color: @link-color;
+  color: @gray-27;
   text-decoration: none;
 
   &:hover {
-    color: @link-color--hover;
-    text-decoration: underline;
+    color: fade(@gray-27, 60%);
+    text-decoration: none;
+  }
+
+  &:active {
+    color: fade(@gray-27, 30%);
+    text-decoration: none;
   }
 }
 
