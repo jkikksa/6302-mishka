@@ -38,6 +38,20 @@ a {
   }
 }
 
+a[href^="mailto"] {
+  border-bottom: 1px solid @aqua;
+
+  &:hover {
+    color: @lightaqua;
+    border-bottom: 1px solid @lightaqua;
+  }
+
+  &:active {
+    color: fade(@lightaqua, 30%);
+    border-bottom: 1px solid fade(@lightaqua, 10%);
+  }
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
