@@ -4,7 +4,12 @@
 
 .features__inner {
   .container();
-  outline: 2px dashed red; // временно для удобства
+
+  @media (min-width: @screen-desktop) {
+    padding-left: @padding-inner-desktop + 175px;
+    padding-right: @padding-inner-desktop + 175px;
+    width: @screen-desktop - (@padding-inner-desktop * 2) - 350px;
+  }
 }
 
 .features__title {
@@ -12,6 +17,20 @@
   font-size: 25px;
   line-height: 1.2em;
   color: @text-color--dark;
+  margin-top: 0;
+  margin-bottom: 27px;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 43px;
+    line-height: 1.163em;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    font-size: 53px;
+    line-height: 1.075em;
+    margin-bottom: 43px;
+  }
 }
 
 .features__list {
@@ -25,16 +44,59 @@
 }
 
 .features__list-item {
-  padding: 40px 0;
+  padding-top: 60px;
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.2;
+  line-height: 1.2em;
+  position: relative;
+  margin-bottom: 23px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    outline: 1px dashed red;
+    background-image: url("../img/icon-feature-1.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
 
   @media (min-width: @screen-tablet) {
-    width: 200px;
+    width: 304px;
+    padding-right: 30px;
+    font-size: 20px;
+    line-height: 1.2em;
+    margin-bottom: 46px;
   }
 
   @media (min-width: @screen-desktop) {
-    width: 350px;
+    width: 320px;
+  }
+
+  &--flower {
+    order: 1;
+  }
+
+  &--money {
+    order: 3;
+  }
+
+  &--heart {
+    order: 5;
+  }
+
+  &--clew {
+    order: 2;
+  }
+
+  &--rocket {
+    order: 4;
+  }
+
+  &--gift {
+    order: 6;
   }
 }
