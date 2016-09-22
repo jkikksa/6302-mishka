@@ -1,0 +1,44 @@
+.field-checkbox {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  font: inherit;
+  font-weight: 700;
+  color: @text-color--dark;
+
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 200px;
+  }
+}
+
+.field-checkbox__title {
+  .decor-line();
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.941em;
+  color: @aqua;
+  text-transform: uppercase;
+
+  @media (min-width: @screen-tablet) {
+    top: 40px;
+  }
+}
+
+.field-checkbox__wrapper {
+  display: block;
+  margin-bottom: 30px;
+
+  @media (min-width: @screen-tablet) {
+    width: 200px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 250px;
+  }
+}

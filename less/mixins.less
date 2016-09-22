@@ -1,0 +1,64 @@
+.style-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+}
+
+.container() {
+  width: @screen-mobile - @padding-inner-mobile * 2;
+  padding-left: @padding-inner-mobile;
+  padding-right: @padding-inner-mobile;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @screen-tablet) {
+    width: @screen-tablet - @padding-inner-tablet * 2;
+    padding-left: @padding-inner-tablet;
+    padding-right: @padding-inner-tablet;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: @screen-desktop - @padding-inner-desktop * 2;
+    padding-left: @padding-inner-desktop;
+    padding-right: @padding-inner-desktop;
+  }
+}
+
+.visually-hidden() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+// Эта примесь добавляет декоративную полоску
+// в заголовке полей формы на мобильных разрешениях
+.decor-line() {
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 200px;
+    height: 1px;
+    background-color: @aqua;
+  }
+
+  @media (min-width: @screen-tablet) {
+
+    &::after {
+      content: normal;
+      width: 0;
+      height: 0;
+      background-color: transparent;
+    }
+  }
+}

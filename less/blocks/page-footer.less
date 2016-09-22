@@ -1,0 +1,37 @@
+.page-footer {
+  padding: 20px 0;
+  background-color: @gray-95;
+}
+
+.page-footer__inner {
+  .container();
+
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: @screen-tablet) {
+    display: block;
+  }
+}
+
+.page-footer__copyright {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.055em;
+  color: @text-color--dark;
+}
+
+.page-footer__copyright-link {
+  display: inline-block;
+  width: 30px;
+  height: 35px;
+  font-size: 0;
+  vertical-align: middle;
+  outline: 1px dashed red; // временно для удобства
+}
