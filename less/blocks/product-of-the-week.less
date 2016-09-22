@@ -7,6 +7,11 @@
     padding-top: 50px;
     padding-bottom: 60px;
   }
+
+  @media (min-width: @screen-desktop) {
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
 }
 
 .product-of-the-week__inner {
@@ -28,10 +33,7 @@
   }
 
   @media (min-width: @screen-desktop) {
-    padding: 20px;
-    padding-top: 100px;
     padding-right: 585px;
-    padding-bottom: 100px;
   }
 }
 
@@ -44,15 +46,16 @@
   color: @text-color--dark;
 
   @media (min-width: @screen-tablet) {
-    font-size: 40px;
-    line-height: 1.25em;
+    font-size: 43px;
+    line-height: 1.163em;
     margin-bottom: 50px;
   }
 
   @media (min-width: @screen-desktop) {
-    margin-bottom: 0;
+    margin-bottom: 50px;
     font-size: 53px;
     line-height: 1.075em;
+    text-align: left;
   }
 }
 
@@ -69,7 +72,9 @@
     right: 60px;
     top: 15px;
     width: 80px;
-
+  }
+  @media (min-width: @screen-desktop) {
+    left: 100px;
   }
 }
 
@@ -82,6 +87,11 @@
   @media (min-width: @screen-tablet) {
     font-size: 17px;
     line-height: 1.765;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 45px;
   }
 }
 
@@ -97,6 +107,14 @@
   td {
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 110px;
   }
 }
 
@@ -115,14 +133,14 @@
 
   @media (min-width: @screen-tablet) {
     position: absolute;
-    top: 0;
+    top: 7px;
     right: 0;
     width: 333px;
     height: 404px;
   }
 
   @media (min-width: @screen-desktop) {
-    top: -100px;
+    top: -160px;
     z-index: -1;
     width: 525px;
     height: 636px;
@@ -139,5 +157,6 @@
   @media (min-width: @screen-tablet) {
     font-size: 20px;
     line-height: 1.2em;
+    margin-bottom: 35px;
   }
 }
