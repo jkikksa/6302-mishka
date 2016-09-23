@@ -1,10 +1,41 @@
 .inner-page-title {
   background-color: @gray-95;
+  border-top: 1px solid @gray-87;
+
+  @media (min-width: @screen-tablet) {
+    margin-top: -50px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-top: -40px;
+  }
 }
 
 .inner-page-title__wrapper {
   .container();
-  padding-top: 60px;
-  padding-bottom: 60px;
-  outline: 2px dashed blue;
+  padding-top: 70px;
+  padding-bottom: 78px;
+
+  @media (min-width: @screen-tablet) {
+    padding-top: 100px;
+  }
+}
+
+.inner-page-title__text {
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.111em;
+  color: @text-color--dark;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 43px;
+    line-height: 1.163em;
+  }
+
+  @media (min-width: @screen-desktop) {
+    font-size: 53px;
+    line-height: 1.075em;
+  }
 }

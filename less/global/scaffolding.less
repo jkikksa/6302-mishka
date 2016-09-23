@@ -26,16 +26,16 @@ body {
 a {
   color: @gray-27;
   text-decoration: none;
+}
 
-  &:hover {
-    color: fade(@gray-27, 60%);
-    text-decoration: none;
-  }
+a[href]:hover {
+  color: fade(@gray-27, 60%);
+  text-decoration: none;
+}
 
-  &:active {
-    color: fade(@gray-27, 30%);
-    text-decoration: none;
-  }
+a[href]:active {
+  color: fade(@gray-27, 30%);
+  text-decoration: none;
 }
 
 a[href^="mailto"] {
