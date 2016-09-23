@@ -1,3 +1,15 @@
+.social {
+  border-bottom: 1px solid @gray-91;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media (min-width: @screen-tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
 .social__title {
   .visually-hidden();
 }
@@ -5,5 +17,10 @@
 .social__list {
   .style-reset();
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social__list-item {
+  margin-right: 10px;
 }
