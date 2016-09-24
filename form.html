@@ -57,8 +57,9 @@
             Заполните простую форму заказа и мы
             свяжемся с вами, чтобы уточнить детали.
           </p>
-          <fieldset class="field-radio  order-form__type">
-            <legend class="field-radio__title">Тип</legend>
+        </div>
+          <div class="field-radio  order-form__type">
+            <div class="field-radio__title">Тип</div>
             <label class="field-radio__wrapper">
               <input type="radio" name="order-type" value="accessories" checked>
               <span class="field-radio__text">Аксессуар для интерьера</span>
@@ -67,9 +68,9 @@
               <input type="radio" name="order-type" value="toy">
               <span class="field-radio__text">Детская игрушка</span>
             </label>
-          </fieldset>
-          <fieldset class="field-checkbox  order-form__color">
-            <legend class="field-checkbox__title">Цвет</legend>
+          </div>
+          <div class="field-checkbox  order-form__color">
+            <div class="field-checkbox__title">Цвет</div>
             <label class="field-checkbox__wrapper">
               <input type="checkbox" name="white" id="checkbox-1" checked>
               <span class="field-checkbox__text">Белый</span>
@@ -94,9 +95,9 @@
               <input type="checkbox" name="orange" id="checkbox-6">
               <span class="field-checkbox__text">Оранжевый</span>
             </label>
-          </fieldset>
-          <fieldset class="field-text  order-form__fullname">
-            <legend class="field-text__title">ФИО</legend>
+          </div>
+          <div class="field-text  order-form__fullname">
+            <div class="field-text__title">ФИО</div>
             <label class="field-text__wrapper">
               <span class="field-text__text">Имя: </span>
               <input type="text" name="order-name" id="order-name" placeholder="Введите ваше имя" required>
@@ -109,7 +110,7 @@
               <span class="field-text__text">Отчество: </span>
               <input type="text" name="order-patronymic" id="order-patronymic" placeholder="Отчество, если желаете" required>
             </label>
-          </fieldset>
+          </div>
           <div class="field-telephone  order-form__telephone">
             <div class="field-telephone__title">Тел</div>
             <input type="tel" name="order-tel" id="order-tel" pattern="+7s[0-9]{3}s[0-9]{3}s[0-9]{2}s[0-9]{2}" placeholder="+7 ХХХ ХХ ХХ" required>
@@ -124,7 +125,6 @@
           </div>
           <div class="order-form__requirement-text">Все поля обязательны для заполнения</div>
           <input class="button" type="submit" value="Отправить заказ">
-        </div>
       </form>
     </main>
     <footer class="page-footer">
