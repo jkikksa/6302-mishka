@@ -1,14 +1,7 @@
 .field-textarea {
-  position: relative;
-  margin-bottom: 20px;
-  padding-top: 30px;
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
-
-  @media (min-width: @screen-tablet) {
-    padding-left: 140px;
-  }
 
   textarea {
     padding: 15px;
@@ -17,6 +10,25 @@
     border: 2px solid @gray-27;
     outline: none;
     resize: vertical;
+  }
+}
+
+.field-textarea__inner {
+  .container();
+  position: relative;
+  outline: 2px dashed red;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  @media (min-width: @screen-tablet) {
+    width: 501px;
+    padding-left: 167px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 700px;
+    padding-left: 175px;
+    padding-right: 175px;
   }
 }
 

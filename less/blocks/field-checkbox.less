@@ -1,15 +1,33 @@
 .field-checkbox {
-  position: relative;
-  margin-bottom: 20px;
-  padding-top: 30px;
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
 
   @media (min-width: @screen-tablet) {
+    background-color: @gray-95;
+  }
+}
+
+.field-checkbox__inner {
+  .container();
+  position: relative;
+  outline: 2px dashed red;
+  padding-left: 62px;
+  width: 198px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  @media (min-width: @screen-tablet) {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 200px;
+    width: 419px;
+    padding-left: 249px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 620px;
+    padding-left: 255px;
+    padding-right: 175px;
   }
 }
 

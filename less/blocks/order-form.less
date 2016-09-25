@@ -4,26 +4,49 @@
   line-height: 1.059em;
 }
 
-.order-form__inner {
+.order-form__description-wrapper {
   .container();
   outline: 2px dashed red; // временно для удобства
 }
 
 .order-form__description {
-  margin-bottom: 20px;
+  margin: 0;
   font-size: 13px;
   line-height: 1.846em;
 }
 
-.order-form__type {
-  padding-left: 60px;
+.order-form__submit-wrapper {
+  .container();
+
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 700px;
+    padding-left: 175px;
+    padding-right: 175px;
+  }
 }
 
-.order-form__color {
-  padding-left: 60px;
+.order-form__submit {
+
+  @media (min-width: @screen-tablet) {
+    order: -1;
+    margin: 0;
+  }
 }
 
 .order-form__requirement-text {
   font-size: 14px;
   line-height: 1.2;
+
+  @media (min-width: @screen-tablet) {
+    width: 334px;
+    margin-left: auto;
+    text-align: right;
+  }
 }
