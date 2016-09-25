@@ -2,6 +2,7 @@
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
+  margin-bottom: 15px;
 
   textarea {
     padding: 15px;
@@ -10,15 +11,14 @@
     border: 2px solid @gray-27;
     outline: none;
     resize: vertical;
+    min-height: 140px;
   }
 }
 
 .field-textarea__inner {
   .container();
   position: relative;
-  outline: 2px dashed red;
   padding-top: 50px;
-  padding-bottom: 20px;
 
   @media (min-width: @screen-tablet) {
     width: 501px;
