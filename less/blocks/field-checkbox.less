@@ -58,3 +58,32 @@
     width: 250px;
   }
 }
+
+//стилизация кастомных чекбоксов
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + span {
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    border: 2px solid @gray-27;
+  }
+}
+
+input[type="checkbox"]:checked + span {
+
+  &::before {
+    background-image: data-uri("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}

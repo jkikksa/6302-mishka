@@ -44,3 +44,34 @@
   display: block;
   padding-bottom: 30px;
 }
+
+// Стилизация кастомных радиокнопок
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + span {
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -60px + 2px; // 2px разницы т.к. внешний круг это тень
+    top: 0;
+    box-shadow: 0 0 0 2px @gray-27;
+    width: 16px;
+    height: 16px;
+    border: 10px solid @white;
+    border-radius: 50%;
+    background-color: @white;
+  }
+}
+
+input[type="radio"]:checked + span {
+
+  &::after {
+    background-color: @aqua;
+  }
+}
