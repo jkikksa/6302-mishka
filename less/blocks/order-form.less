@@ -1,7 +1,14 @@
 .order-form {
   padding-top: 25px;
+  padding-bottom: 60px;
   font-size: 17px;
   line-height: 1.059em;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 19px;
+    line-height: 0.947em;
+    padding-top: 70px;
+  }
 }
 
 .order-form__description-wrapper {
@@ -13,6 +20,11 @@
   margin: 0;
   font-size: 13px;
   line-height: 1.846em;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 17px;
+    line-height: 1.765em;
+  }
 }
 
 .order-form__submit-wrapper {
@@ -33,6 +45,7 @@
 }
 
 .order-form__submit {
+  width: 100%;
 
   @media (min-width: @screen-tablet) {
     order: -1;
