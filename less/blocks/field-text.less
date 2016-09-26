@@ -3,6 +3,12 @@
   font-weight: 700;
   color: @text-color--dark;
   margin-bottom: 36px;
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .field-text__inner {
@@ -13,6 +19,7 @@
   @media (min-width: @screen-tablet) {
     width: 501px;
     padding-left: 167px;
+    padding-top: 0;
   }
 
   @media (min-width: @screen-desktop) {
@@ -27,7 +34,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 0.941em;
@@ -46,6 +52,7 @@
   @media (min-width: @screen-tablet) {
     display: flex;
     align-items: baseline;
+    margin-bottom: 18px;
   }
 
 }
@@ -66,5 +73,6 @@ input[type="text"] {
   @media (min-width: @screen-tablet) {
     width: 300px;
     flex-grow: 1;
+    padding-left: 17px;
   }
 }

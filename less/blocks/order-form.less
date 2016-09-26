@@ -6,14 +6,26 @@
 
   @media (min-width: @screen-tablet) {
     font-size: 19px;
-    line-height: 0.947em;
+    line-height: 0.948em;
     padding-top: 70px;
+    padding-bottom: 4px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    padding-top: 145px;
+    padding-bottom: 45px;
   }
 }
 
 .order-form__description-wrapper {
   .container();
   margin-bottom: 25px;
+
+  @media (min-width: @screen-desktop) {
+    padding-left: 175px;
+    padding-right: 175px;
+    width: 700px;
+  }
 }
 
 .order-form__description {
@@ -50,16 +62,21 @@
   @media (min-width: @screen-tablet) {
     order: -1;
     margin: 0;
+    width: 230px;
   }
 }
 
 .order-form__requirement-text {
   font-size: 14px;
   line-height: 1.2;
+  margin-bottom: 22px;
 
   @media (min-width: @screen-tablet) {
     width: 334px;
     margin-left: auto;
     text-align: right;
+    font-size: 17px;
+    line-height: 1.765em;
+    margin-bottom: 0;
   }
 }

@@ -2,9 +2,17 @@
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
+  margin-bottom: 35px;
 
   @media (min-width: @screen-tablet) {
     background-color: @gray-95;
+    margin-bottom: 5px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    padding-bottom: 65px;
   }
 }
 
@@ -12,7 +20,7 @@
   .container();
   position: relative;
   width: 260px;
-  padding-top: 50px;
+  padding-top: 40px;
 
   @media (min-width: @screen-tablet) {
     display: flex;
@@ -20,14 +28,13 @@
     justify-content: space-between;
     width: 501px;
     padding-left: 167px;
-    padding-top: 75px;
-    padding-bottom: 20px;
+    padding-top: 0;
   }
 
   @media (min-width: @screen-desktop) {
-    width: 620px;
-    padding-left: 255px;
-    padding-right: 175px;
+    width: 875px;
+    padding-left: 175px;
+    justify-content: flex-start;
   }
 }
 
@@ -36,7 +43,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 0.941em;
@@ -50,17 +56,33 @@
 
 .field-checkbox__wrapper {
   display: block;
-  padding-bottom: 43px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   padding-left: 62px;
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @screen-tablet) {
     width: 157px;
     padding-left: 82px;
-    padding-bottom: 60px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin-bottom: 25px;
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
   }
 
   @media (min-width: @screen-desktop) {
-    width: 250px;
+    width: 180px;
+
+    &:nth-last-child(3) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -78,16 +100,16 @@ input[type="checkbox"] + span {
     content: "";
     position: absolute;
     left: -60px;
-    top: 0;
+    top: -7px;
     width: 36px;
     height: 36px;
     border: 2px solid @gray-27;
 
     @media (min-width: @screen-tablet) {
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       left: -82px;
-      top: -11px;
+      top: -13px;
     }
   }
 }

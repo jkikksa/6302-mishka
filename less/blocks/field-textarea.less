@@ -4,6 +4,14 @@
   color: @text-color--dark;
   margin-bottom: 15px;
 
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 40px;
+  }
+
   textarea {
     padding: 15px;
     font-size: 17px;
@@ -23,6 +31,7 @@
   @media (min-width: @screen-tablet) {
     width: 501px;
     padding-left: 167px;
+    padding-top: 30px;
   }
 
   @media (min-width: @screen-desktop) {
@@ -37,7 +46,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 0.941em;

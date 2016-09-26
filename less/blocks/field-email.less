@@ -6,6 +6,7 @@
 
   @media (min-width: @screen-tablet) {
     background-color: @gray-95;
+    padding-bottom: 67px;
   }
 }
 
@@ -17,6 +18,7 @@
   @media (min-width: @screen-tablet) {
     width: 501px;
     padding-left: 167px;
+    padding-top: 20px;
   }
 
   @media (min-width: @screen-desktop) {
@@ -31,7 +33,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 0.941em;
@@ -40,5 +41,17 @@
 
   @media (min-width: @screen-tablet) {
     top: 40px;
+  }
+}
+
+input[type="email"] {
+  border: none;
+  border-bottom: 2px solid @black;
+  outline: none;
+  padding: 15px 0;
+
+  @media (min-width: @screen-tablet) {
+    padding-left: 17px;
+    background-color: @gray-95;
   }
 }
