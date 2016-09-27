@@ -92,7 +92,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"] + span {
+input[type="checkbox"] + .field-checkbox__text {
   position: relative;
   cursor: pointer;
 
@@ -112,9 +112,17 @@ input[type="checkbox"] + span {
       top: -13px;
     }
   }
+
+  &:hover::before {
+    border: 2px solid @aqua;
+  }
+
+  &:active::before {
+    border: 2px solid @gray-78;
+  }
 }
 
-input[type="checkbox"]:checked + span {
+input[type="checkbox"]:checked + .field-checkbox__text {
 
   &::before {
     background-image: data-uri("../img/icon-tick.svg");

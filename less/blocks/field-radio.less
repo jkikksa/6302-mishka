@@ -74,7 +74,7 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="radio"] + span {
+input[type="radio"] + .field-radio__text {
   position: relative;
   cursor: pointer;
 
@@ -98,9 +98,17 @@ input[type="radio"] + span {
       top: -11px;
     }
   }
+
+  &:hover::after {
+    box-shadow: 0 0 0 2px @aqua;
+  }
+
+  &:active::after {
+    box-shadow: 0 0 0 2px @gray-78;
+  }
 }
 
-input[type="radio"]:checked + span {
+input[type="radio"]:checked + .field-radio__text {
 
   &::after {
     background-color: @aqua;
