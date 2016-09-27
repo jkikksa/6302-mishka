@@ -58,7 +58,6 @@
     left: 0;
     width: 40px;
     height: 40px;
-    background-image: url("../img/icon-feature-1.svg");
     background-repeat: no-repeat;
     background-position: left top;
     outline: 1px dashed red;
@@ -78,25 +77,50 @@
 
   &--flower {
     order: 1;
+
+    &::before {
+      background-image: url("../img/icon-feature-1.svg");
+    }
   }
 
   &--money {
     order: 3;
+
+    &::before {
+      background-image: url("../img/icon-feature-3.svg");
+    }
+
   }
 
   &--heart {
     order: 5;
+
+    &::before {
+      background-image: url("../img/icon-feature-5.svg");
+    }
   }
 
   &--clew {
     order: 2;
+
+    &::before {
+      background-image: url("../img/icon-feature-2.svg");
+    }
   }
 
   &--rocket {
     order: 4;
+
+    &::before {
+      background-image: url("../img/icon-feature-4.svg");
+    }
   }
 
   &--gift {
     order: 6;
+
+    &::before {
+      background-image: url("../img/icon-feature-6.svg");
+    }
   }
 }

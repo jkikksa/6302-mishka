@@ -54,7 +54,7 @@
     padding-right: 350px;
     padding-bottom: 30px;
     padding-left: 40px;
-    background-position: 450px center;
+    background-position: 450px 30px;
   }
 
   &:hover {
@@ -75,10 +75,16 @@
     background-image: url("../img/icon-interior.svg");
 
     &:hover {
+      background-image: url("../img/icon-interior--hover.svg");
 
       @media (min-width: @screen-tablet) {
         box-shadow: 0 5px 0 0 @aqua;
+        background-position-y: 25px;
       }
+    }
+
+    &:active {
+      background-image: url("../img/icon-interior--active.svg");
     }
   }
 
@@ -87,10 +93,16 @@
     background-image: url("../img/icon-toy.svg");
 
     &:hover {
-      
+      background-image: url("../img/icon-toy--hover.svg");
+
       @media (min-width: @screen-tablet) {
+        background-position-y: 25px;
         box-shadow: 0 5px 0 0 @darkaqua;
       }
+    }
+
+    &:active {
+      background-image: url("../img/icon-toy--active.svg");
     }
   }
 }
