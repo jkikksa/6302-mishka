@@ -1,25 +1,105 @@
 .our-production {
-  padding: 20px 0;
+  margin-bottom: 40px;
 }
 
 .our-production__inner {
   .container();
-  outline: 2px dashed green; // временно для удобства
+
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @screen-desktop) {
+    position: relative;
+    padding-left: 682px;
+    width: 368px;
+    min-height: 455px;
+  }
+}
+
+.our-production__title-wrapper {
+  border: 1px solid @gray-93;
+  padding: 25px;
+  padding-left: 90px;
+  padding-right: 33px;
+
+  @media (min-width: @screen-tablet) {
+    border-bottom: none;
+  }
+
+  @media (min-width: @screen-desktop) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.our-production__title {
+  font-size: 17px;
+  line-height: 1.412em;
+  color: @text-color--dark;
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-top: auto;
+  }
 }
 
 .our-production__video {
-  display: block;
-  width: 100%;
-  height: auto;
+
+  @media (min-width: @screen-tablet) {
+    order: -1;
+    height: 455px;
+    width: 668px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 682px;
+    height: 455px;
+    position: absolute;
+    left: 0;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: @gray-78; // временно пока нет видео
+  }
 }
 
-.our-production__wrapper {
-  padding: 10px 27px;
+.our-production__text-wrapper {
   border: 1px solid @gray-93;
+  border-top-width: 0;
+  padding: 30px 33px;
+
+  @media (min-width: @screen-tablet) {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-top: auto;
+  }
 }
 
 .our-production__text {
   margin: 0;
+  margin-bottom: 20px;
   font-size: 13px;
   line-height: 1.846em;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 15px;
+    line-height: 2em;
+  }
+
+
 }
