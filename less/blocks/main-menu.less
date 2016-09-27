@@ -13,8 +13,8 @@
   display: block;
   padding-top: 20px;
   padding-bottom: 14px;
-  border-top: 1px solid @gray-93;
   text-align: center;
+  border-top: 1px solid @gray-93;
 
   @media (min-width: @screen-tablet) {
     flex-grow: 1;
@@ -54,13 +54,13 @@
   border-bottom: 1px solid @gray-93;
 
   @media (min-width: @screen-tablet) {
-    border-bottom: none;
-    padding-left: 0;
+    width: 167px;
     padding-right: 0;
     padding-bottom: 0;
+    padding-left: 0;
     font-size: 15px;
     line-height: 1.6em;
-    width: 167px;
+    border-bottom: none;
   }
 
   @media (min-width: @screen-desktop) {
@@ -71,13 +71,14 @@
 
 // тут задается рамка сверху у первого элемента меню
 .main-menu__list-item:first-child {
+
   .main-menu__link {
-    border-top: 1px solid @gray-93;
     padding-bottom: 27px;
+    border-top: 1px solid @gray-93;
 
     @media (min-width: @screen-tablet) {
-      border-top: 0;
       padding-bottom: 0;
+      border-top: 0;
     }
   }
 }
@@ -92,11 +93,12 @@
   }
 
   .main-menu__link {
+
     @media (min-width: @screen-desktop) {
+      width: 175px;
       padding-top: 15px;
       font-size: 15px;
       line-height: 1.6em;
-      width: 175px;
     }
   }
 }
@@ -106,29 +108,29 @@
 
   @media (min-width: @screen-tablet) {
     display: block;
-    font-size: 15px;
-    line-height: 1.6em;
     order: 3;
     padding-top: 15px;
+    font-size: 15px;
+    line-height: 1.6em;
   }
 }
 
 .main-menu__toggler {
   position: absolute;
-  z-index: 9;
   top: 10px;
   right: 0;
-  padding: 0;
-  font-size: 0;
+  z-index: 9;
   width: 90px;
   height: 60px;
+  padding: 0;
+  font-size: 0;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 0 0;
   border: none;
   outline: none;
-  cursor: pointer;
   outline: 1px dashed red;
+  cursor: pointer;
 
   @media (min-width: @screen-tablet) {
     display: none;
@@ -137,7 +139,9 @@
 
 // Условия только для мобильных разрешений
 @media (max-width: (@screen-tablet - 1px)) {
+
   .main-menu--closed {
+
     .main-menu__toggler {
       background-image: url("../img/icon-menu-open.svg");
       background-position: center center;

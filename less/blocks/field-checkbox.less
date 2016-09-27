@@ -1,14 +1,14 @@
 .field-checkbox {
+  margin-bottom: 35px;
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
-  margin-bottom: 35px;
 
   @media (min-width: @screen-tablet) {
-    background-color: @gray-95;
     margin-bottom: 5px;
-    padding-bottom: 60px;
     padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: @gray-95;
   }
 
   @media (min-width: @screen-desktop) {
@@ -27,14 +27,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 501px;
-    padding-left: 167px;
     padding-top: 0;
+    padding-left: 167px;
   }
 
   @media (min-width: @screen-desktop) {
+    justify-content: flex-start;
     width: 875px;
     padding-left: 175px;
-    justify-content: flex-start;
   }
 }
 
@@ -56,10 +56,10 @@
 
 .field-checkbox__wrapper {
   display: block;
+  margin-bottom: 21px;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 62px;
-  margin-bottom: 21px;
 
   &:last-child {
     margin-bottom: 0;
@@ -67,10 +67,10 @@
 
   @media (min-width: @screen-tablet) {
     width: 157px;
-    padding-left: 82px;
+    margin-bottom: 25px;
     padding-top: 17px;
     padding-bottom: 17px;
-    margin-bottom: 25px;
+    padding-left: 82px;
 
     &:nth-last-child(2) {
       margin-bottom: 0;
@@ -99,17 +99,17 @@ input[type="checkbox"] + .field-checkbox__text {
   &::before {
     content: "";
     position: absolute;
-    left: -60px;
     top: -7px;
+    left: -60px;
     width: 36px;
     height: 36px;
     border: 2px solid @gray-27;
 
     @media (min-width: @screen-tablet) {
+      top: -13px;
+      left: -82px;
       width: 48px;
       height: 48px;
-      left: -82px;
-      top: -13px;
     }
   }
 
@@ -123,7 +123,7 @@ input[type="checkbox"] + .field-checkbox__text {
 }
 
 input[type="checkbox"]:checked + .field-checkbox__text {
-
+  
   &::before {
     background-image: data-uri("../img/icon-tick.svg");
     background-repeat: no-repeat;
