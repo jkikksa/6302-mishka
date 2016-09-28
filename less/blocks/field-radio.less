@@ -1,13 +1,31 @@
 .field-radio {
-  position: relative;
-  margin-bottom: 20px;
-  padding-top: 30px;
+  margin-bottom: 22px;
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
 
   @media (min-width: @screen-tablet) {
-    padding-left: 200px;
+    margin-bottom: 15px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+}
+
+.field-radio__inner {
+  .container();
+  position: relative;
+  width: 260px;
+  padding-top: 40px;
+
+  @media (min-width: @screen-tablet) {
+    width: 501px;
+    padding-top: 0;
+    padding-left: 167px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 875px;
+    padding-left: 175px;
   }
 }
 
@@ -16,7 +34,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 0.941em;
@@ -24,11 +41,76 @@
   text-transform: uppercase;
 
   @media (min-width: @screen-tablet) {
-    top: 40px;
+    top: 50px;
   }
 }
 
 .field-radio__wrapper {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 62px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 26px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 82px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Стилизация кастомных радиокнопок
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + .field-radio__text {
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -60px + 2px; // 2px разницы т.к. внешний круг это тень
+    width: 16px;
+    height: 16px;
+    background-color: @white;
+    border: 10px solid @white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px @gray-27;
+
+    @media (min-width: @screen-tablet) {
+      top: -11px;
+      left: -80px;
+      width: 22px;
+      height: 22px;
+      border: 13px solid @white;
+    }
+  }
+
+  &:hover::after {
+    box-shadow: 0 0 0 2px @aqua;
+  }
+
+  &:active::after {
+    box-shadow: 0 0 0 2px @gray-78;
+  }
+}
+
+input[type="radio"]:checked + .field-radio__text {
+
+  &::after {
+    background-color: @aqua;
+  }
 }

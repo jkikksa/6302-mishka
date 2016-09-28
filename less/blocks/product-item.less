@@ -1,52 +1,31 @@
 .product-item {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   @media (min-width: @screen-tablet) {
     display: flex;
+    min-height: 334px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @screen-desktop) {
-    display: block;
+    flex-direction: column;
     width: 315px;
   }
 }
 
-.product-item__wrapper {
-  padding-right: 27px;
-  padding-left: 27px; // отступ в карточке товара
-  border: 1px solid @gray-93;
-
-  @media (min-width: @screen-tablet) {
-    width: 334px;
-    height: 334px;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  @media (min-width: @screen-desktop) {
-    width: auto;
-    height: auto;
-  }
-}
-
-.product-item__buy-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-top: 1px solid @gray-93;
-}
-
 .product-item__image-link {
+  display: block;
+  width: 260px;
+  height: 195px;
 
   @media (min-width: @screen-tablet) {
-    display: block;
     width: 334px;
     height: 334px;
   }
 
   @media (min-width: @screen-desktop) {
     width: auto;
-    height: auto;
+    height: 462px;
   }
 }
 
@@ -56,16 +35,69 @@
   height: 100%;
 }
 
+.product-item__wrapper {
+  padding-top: 24px;
+  padding-right: 27px;
+  padding-bottom: 30px;
+  padding-left: 27px; // отступ в карточке товара
+  border: 1px solid @gray-93;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 266px;
+    padding-right: 33px;
+    padding-left: 33px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    flex-grow: 1;
+    width: auto;
+  }
+}
+
 .product-item__title {
+  margin: 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 1.411em;
   color: @text-color--dark;
+
+  @media (min-width: @screen-tablet) {
+    padding-right: 30px;
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+
+  @media (min-width: @screen-desktop) {
+    padding-right: 0;
+  }
 }
 
 .product-item__description {
+  margin-bottom: 20px;
   font-size: 13px;
   line-height: 2.307em;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 15px;
+    line-height: 2em;
+  }
+}
+
+.product-item__buy-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid @gray-93;
+
+  @media (min-width: @screen-tablet) {
+    margin-top: auto;
+  }
 }
 
 .product-item__price {
@@ -74,6 +106,11 @@
   font-size: 15px;
   line-height: 1.6em;
   color: @text-color--dark;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 17px;
+    line-height: 1.412em;
+  }
 }
 
 .product-item__buy {

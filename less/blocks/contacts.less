@@ -1,27 +1,27 @@
 .contacts {
+  position: relative;
   padding-top: 70px;
   padding-bottom: 50px;
-  position: relative;
 }
 
 .contacts__inner {
   .container();
 
   @media (min-width: @screen-desktop) {
-    padding-left: @padding-inner-desktop + 175px;
-    padding-right: @padding-inner-desktop + 565px;
-    width: @screen-desktop - @padding-inner-desktop * 2 - 740px;
+    width: 350px;
+    padding-right: 525px;
+    padding-left: 175px;
   }
 }
 
 .contacts__title {
+  position: relative;
   margin-top: 0;
   margin-bottom: 50px;
+  font-weight: 700;
   font-size: 18px;
   line-height: 1.667em;
-  font-weight: 700;
   color: @text-color--dark;
-  position: relative;
 
   @media (min-width: @screen-tablet) {
     font-size: 43px;
@@ -30,12 +30,12 @@
     &::after {
       content: "";
       position: absolute;
+      top: 0;
+      right: 0;
       width: 47px;
       height: 82px;
       background-image: url("../img/icon-flag.svg");
       background-repeat: no-repeat;
-      right: 0;
-      top: 0;
     }
   }
 
@@ -67,13 +67,12 @@
       display: flex;
     }
   }
-
 }
 
 .contacts__table-parameter {
   width: 78px;
-  vertical-align: top;
   padding: 0;
+  vertical-align: top;
 
   @media (min-width: @screen-tablet) and (max-width: (@screen-desktop - 1px)) {
     display: table-cell;
@@ -85,8 +84,8 @@
 }
 
 .contacts__table-value {
-  vertical-align: top;
   padding: 0;
+  vertical-align: top;
 
   @media (min-width: @screen-tablet) and (max-width: (@screen-desktop - 1px)) {
     display: table-cell;
@@ -95,10 +94,14 @@
 }
 
 .contacts__writeus {
+  
+  @media (min-width: @screen-tablet) {
+    width: 190px;
+  }
 
   @media (min-width: @screen-desktop) {
-    margin-top: 80px;
     width: 190px;
+    margin-top: 80px;
     margin-left: 0;
   }
 }

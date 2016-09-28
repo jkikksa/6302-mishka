@@ -13,11 +13,10 @@
 .user-block__cart {
 
   @media (min-width: @screen-tablet) {
+    position: relative;
     padding-right: 0;
     padding-left: 0;
-    position: relative;
   }
-
 }
 
 .user-block__search {
@@ -34,32 +33,40 @@
   display: block;
   padding: 26px 75px;
   padding-right: 30px;
-  border-bottom: 1px solid @gray-93;
   font-weight: 700;
   font-size: 17px;
   line-height: 1.412em;
   color: @text-color--dark;
+  border-bottom: 1px solid @gray-93;
 
   &::before {
     content: "";
     position: absolute;
-    left: 30px;
     top: 50% - 9px;
+    left: 30px;
     width: 18px;
     height: 18px;
-    background-image: url("../img/icon-search.svg");
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_user-block_search.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
 
+  &:hover::before {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_user-block_search--hover.svg");
+  }
+
+  &:active::before {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_user-block_search--active.svg");
+  }
+
   @media (min-width: @screen-tablet) {
-    text-indent: 100%;
-    white-space: nowrap;
+    padding: 30px 0;
     overflow: hidden;
-    border-left: 1px solid @gray-93;
+    white-space: nowrap;
+    text-indent: 100%;
     border-right: 1px solid @gray-93;
     border-bottom: none;
-    padding: 30px 0;
+    border-left: 1px solid @gray-93;
   }
 }
 
@@ -77,20 +84,28 @@
   &::before {
     content: "";
     position: absolute;
-    left: 30px;
     top: 50% - 9px;
+    left: 30px;
     width: 18px;
     height: 18px;
-    background-image: url("../img/icon-cart.svg");
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_user-block_cart.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
 
+  &:hover::before {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_user-block_cart--hover.svg");
+  }
+
+  &:active::before {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_user-block_cart--active.svg");
+  }
+
   @media (min-width: @screen-tablet) {
     padding-top: 30px;
+    padding-right: 0;
     padding-bottom: 30px;
     padding-left: 80px;
-    padding-right: 0px;
     border-bottom: none;
   }
 }

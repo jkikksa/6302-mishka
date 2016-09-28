@@ -1,22 +1,51 @@
 .field-textarea {
-  position: relative;
-  margin-bottom: 20px;
-  padding-top: 30px;
+  margin-bottom: 15px;
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
 
   @media (min-width: @screen-tablet) {
-    padding-left: 140px;
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 40px;
   }
 
   textarea {
+    min-height: 140px;
     padding: 15px;
     font-size: 17px;
     line-height: 1.059em;
     border: 2px solid @gray-27;
     outline: none;
     resize: vertical;
+
+    &:hover {
+      border: 2px solid @aqua;
+    }
+
+    // &:invalid {
+    //   border: 2px solid @lightred;
+    // }
+  }
+}
+
+.field-textarea__inner {
+  .container();
+  position: relative;
+  padding-top: 50px;
+
+  @media (min-width: @screen-tablet) {
+    width: 501px;
+    padding-top: 30px;
+    padding-left: 167px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 700px;
+    padding-right: 175px;
+    padding-left: 175px;
   }
 }
 
@@ -25,7 +54,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 0.941em;

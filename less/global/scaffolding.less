@@ -21,6 +21,7 @@ body {
   line-height: 2em;
   font-weight: 400;
   color: @text-color;
+  min-width: 320px;
 }
 
 a {
@@ -58,69 +59,4 @@ input[type="tel"],
 textarea {
   box-sizing: border-box;
   width: 100%;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-  border: none;
-  border-bottom: 2px solid @black;
-  outline: none;
-  padding: 15px 0;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"] + span {
-  position: relative;
-  cursor: pointer;
-  &::before {
-    content: "";
-    position: absolute;
-    left: -60px;
-    top: 0;
-    width: 36px;
-    height: 36px;
-    border: 2px solid @gray-27;
-  }
-}
-
-input[type="checkbox"]:checked + span {
-
-  &::before {
-    background-image: data-uri("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-input[type="radio"] + span {
-  position: relative;
-  cursor: pointer;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: -60px + 2px; // 2px разницы т.к. внешний круг это тень
-    top: 0;
-    box-shadow: 0 0 0 2px @gray-27;
-    width: 16px;
-    height: 16px;
-    border: 10px solid @white;
-    border-radius: 50%;
-    background-color: @white;
-  }
-}
-
-input[type="radio"]:checked + span {
-
-  &::after {
-    background-color: @aqua;
-  }
 }

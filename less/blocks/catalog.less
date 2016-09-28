@@ -1,13 +1,21 @@
 .catalog {
-  padding: 20px 0;
+  padding-top: 30px;
+
+  @media (min-width: @screen-tablet) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    padding-top: 150px;
+  }
 }
 
 .catalog__inner {
   .container();
-  outline: 2px dashed red; // временно для удобства
 
   @media (min-width: @screen-desktop) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }

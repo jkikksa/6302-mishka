@@ -13,13 +13,19 @@
   display: block;
   padding-top: 20px;
   padding-bottom: 14px;
-  border-top: 1px solid @gray-93;
   text-align: center;
+  border-top: 1px solid @gray-93;
+
+  img {
+    vertical-align: bottom;
+  }
 
   @media (min-width: @screen-tablet) {
     flex-grow: 1;
     text-align: left;
     border-top: none;
+    align-self: center;
+    padding: 0;
   }
 
   @media (min-width: @screen-desktop) {
@@ -54,30 +60,46 @@
   border-bottom: 1px solid @gray-93;
 
   @media (min-width: @screen-tablet) {
-    border-bottom: none;
-    padding-left: 0;
+    width: 167px;
     padding-right: 0;
-    padding-bottom: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 0;
     font-size: 15px;
     line-height: 1.6em;
-    width: 167px;
+    border-bottom: none;
   }
 
   @media (min-width: @screen-desktop) {
     font-size: 17px;
     line-height: 1.411em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &--active {
+
+    &:hover {
+      color: @text-color--dark;
+    }
   }
 }
 
 // тут задается рамка сверху у первого элемента меню
 .main-menu__list-item:first-child {
+
   .main-menu__link {
-    border-top: 1px solid @gray-93;
     padding-bottom: 27px;
+    border-top: 1px solid @gray-93;
 
     @media (min-width: @screen-tablet) {
+      padding-bottom: 20px;
       border-top: 0;
-      padding-bottom: 0;
+    }
+
+    @media (min-width: @screen-desktop) {
+      padding-bottom: 30px;
+      border-top: 0;
     }
   }
 }
@@ -92,11 +114,13 @@
   }
 
   .main-menu__link {
+
     @media (min-width: @screen-desktop) {
-      padding-top: 15px;
+      width: 175px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       font-size: 15px;
       line-height: 1.6em;
-      width: 175px;
     }
   }
 }
@@ -106,29 +130,30 @@
 
   @media (min-width: @screen-tablet) {
     display: block;
+    order: 3;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 15px;
     line-height: 1.6em;
-    order: 3;
-    padding-top: 15px;
   }
 }
 
 .main-menu__toggler {
   position: absolute;
-  z-index: 9;
   top: 10px;
   right: 0;
-  padding: 0;
-  font-size: 0;
+  z-index: 9;
   width: 90px;
   height: 60px;
+  padding: 0;
+  font-size: 0;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 0 0;
   border: none;
   outline: none;
-  cursor: pointer;
   outline: 1px dashed red;
+  cursor: pointer;
 
   @media (min-width: @screen-tablet) {
     display: none;
@@ -137,7 +162,9 @@
 
 // Условия только для мобильных разрешений
 @media (max-width: (@screen-tablet - 1px)) {
+
   .main-menu--closed {
+
     .main-menu__toggler {
       background-image: url("../img/icon-menu-open.svg");
       background-position: center center;

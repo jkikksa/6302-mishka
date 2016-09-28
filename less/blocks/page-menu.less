@@ -7,8 +7,6 @@
 
   @media (max-width: (@screen-tablet - 1px)) {
     width: @screen-mobile;
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 
@@ -22,6 +20,7 @@
 }
 
 .page-menu__links-item {
+
   @media (min-width: @screen-tablet) {
     width: 50%;
   }
@@ -30,9 +29,9 @@
 .page-menu__link {
   display: block;
   padding-top: 25px;
-  padding-right: @padding-inner-mobile + 130px;
+  padding-right: 160px;
   padding-bottom: 30px;
-  padding-left: @padding-inner-mobile;
+  padding-left: 30px;
   font-weight: 700;
   font-size: 19px;
   line-height: 1.263em;
@@ -42,20 +41,20 @@
   background-position: 240px center;
 
   @media (min-width: @screen-tablet) {
-    font-size: 20px;
-    line-height: 1.5em;
     padding-top: 30px;
+    padding-right: 167px;
     padding-bottom: 30px;
     padding-left: 35px;
-    padding-right: 167px;
+    font-size: 20px;
+    line-height: 1.5em;
   }
 
   @media (min-width: @screen-desktop) {
     padding-top: 30px;
+    padding-right: 350px;
     padding-bottom: 30px;
     padding-left: 40px;
-    padding-right: 350px;
-    background-position: 450px center;
+    background-position: 450px 30px;
   }
 
   &:hover {
@@ -73,25 +72,37 @@
 
   &--interior {
     background-color: @aqua;
-    background-image: url("../img/icon-interior.svg");
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_page-menu_interior.svg");
 
     &:hover {
+      background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_page-menu_interior--hover.svg");
 
       @media (min-width: @screen-tablet) {
         box-shadow: 0 5px 0 0 @aqua;
+        background-position-y: 25px;
       }
+    }
+
+    &:active {
+      background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_page-menu_interior--active.svg");
     }
   }
 
   &--toys {
     background-color: @darkaqua;
-    background-image: url("../img/icon-toy.svg");
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_page-menu_toy.svg");
 
     &:hover {
+      background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_page-menu_toy--hover.svg");
 
       @media (min-width: @screen-tablet) {
+        background-position-y: 25px;
         box-shadow: 0 5px 0 0 @darkaqua;
       }
+    }
+
+    &:active {
+      background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-image/icon_page-menu_toy--active.svg");
     }
   }
 }

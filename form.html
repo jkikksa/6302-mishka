@@ -19,7 +19,7 @@
               <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="main-menu__list-item">
-              <a class="main-menu__link">Вязание на заказ</a>
+              <a class="main-menu__link  main-menu__link--active">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-menu__aux-menu">
@@ -51,14 +51,16 @@
         </div>
       </div>
       <form class="order-form" action="#" method="get">
-        <div class="order-form__inner">
+        <div class="order-form__description-wrapper">
           <p class="order-form__description">
             Мы будем рады воплотить в жизнь ваши пожелания!
             Заполните простую форму заказа и мы
             свяжемся с вами, чтобы уточнить детали.
           </p>
-          <fieldset class="field-radio  order-form__type">
-            <legend class="field-radio__title">Тип</legend>
+        </div>
+        <div class="field-radio">
+          <div class="field-radio__inner">
+            <div class="field-radio__title">Тип</div>
             <label class="field-radio__wrapper">
               <input type="radio" name="order-type" value="accessories" checked>
               <span class="field-radio__text">Аксессуар для интерьера</span>
@@ -67,9 +69,11 @@
               <input type="radio" name="order-type" value="toy">
               <span class="field-radio__text">Детская игрушка</span>
             </label>
-          </fieldset>
-          <fieldset class="field-checkbox  order-form__color">
-            <legend class="field-checkbox__title">Цвет</legend>
+          </div>
+        </div>
+        <div class="field-checkbox">
+          <div class="field-checkbox__inner">
+            <div class="field-checkbox__title">Цвет</div>
             <label class="field-checkbox__wrapper">
               <input type="checkbox" name="white" id="checkbox-1" checked>
               <span class="field-checkbox__text">Белый</span>
@@ -94,9 +98,11 @@
               <input type="checkbox" name="orange" id="checkbox-6">
               <span class="field-checkbox__text">Оранжевый</span>
             </label>
-          </fieldset>
-          <fieldset class="field-text  order-form__fullname">
-            <legend class="field-text__title">ФИО</legend>
+          </div>
+        </div>
+        <div class="field-text">
+          <div class="field-text__inner">
+            <div class="field-text__title">ФИО</div>
             <label class="field-text__wrapper">
               <span class="field-text__text">Имя: </span>
               <input type="text" name="order-name" id="order-name" placeholder="Введите ваше имя" required>
@@ -109,29 +115,37 @@
               <span class="field-text__text">Отчество: </span>
               <input type="text" name="order-patronymic" id="order-patronymic" placeholder="Отчество, если желаете" required>
             </label>
-          </fieldset>
-          <div class="field-telephone  order-form__telephone">
+          </div>
+        </div>
+        <div class="field-telephone">
+          <div class="field-telephone__inner">
             <div class="field-telephone__title">Тел</div>
             <input type="tel" name="order-tel" id="order-tel" pattern="+7s[0-9]{3}s[0-9]{3}s[0-9]{2}s[0-9]{2}" placeholder="+7 ХХХ ХХ ХХ" required>
           </div>
-          <div class="field-email  order-form__email">
+        </div>
+        <div class="field-email">
+          <div class="field-email__inner">
             <div class="field-email__title">E-mail</div>
             <input type="email" name="order-email" id="order-email" placeholder="Ваш Email" required>
           </div>
-          <div class="field-textarea  order-form__additional">
+        </div>
+        <div class="field-textarea">
+          <div class="field-textarea__inner">
             <div class="field-textarea__title">Доп</div>
             <textarea name="order-additional" rows="5" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
           </div>
-          <div class="order-form__requirement-text">Все поля обязательны для заполнения</div>
-          <input class="button" type="submit" value="Отправить заказ">
+        </div>
+        <div class="order-form__submit-wrapper">
+          <div class="order-form__requirement-text">Все поля являются обязательными</div>
+          <input class="button order-form__submit" type="submit" value="Отправить заказ">
         </div>
       </form>
     </main>
     <footer class="page-footer">
       <div class="page-footer__inner">
-        <div class="page-footer__logo">
-          <img src="" alt="MISHKA" width="100" height="34">
-        </div>
+        <a class="page-footer__logo" href="index.html">
+          <img src="img/logo-mobile.svg" alt="MISHKA" width="86" height="35">
+        </a>
         <section class="social">
           <h2 class="social__title">Мы в соцсетях</h2>
           <ul class="social__list">

@@ -4,20 +4,19 @@
 
   @media (min-width: @screen-tablet) {
     position: absolute;
-    right: @padding-inner-tablet;
+    right: 50px;
     bottom: 100px;
   }
 }
 
 .slider-controls__arrow {
   flex-grow: 1;
-  min-height: 50px;
   width: 130px;
+  min-height: 50px;
   background-color: @white;
-  border: 1px solid @gray-93;
-
   background-repeat: no-repeat;
   background-position: center center;
+  border: 1px solid @gray-93;
 
   &--prev {
     background-image: url("../img/icon-left-arrow.svg");
@@ -28,7 +27,7 @@
   }
 
   &:hover {
-    cursor: pointer;
     background-color: @gray-93; //временно для удобства
+    cursor: pointer;
   }
 }

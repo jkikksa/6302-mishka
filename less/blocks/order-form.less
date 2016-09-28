@@ -1,29 +1,82 @@
 .order-form {
-  padding: 20px 0;
+  padding-top: 25px;
+  padding-bottom: 60px;
   font-size: 17px;
   line-height: 1.059em;
+
+  @media (min-width: @screen-tablet) {
+    padding-top: 70px;
+    padding-bottom: 4px;
+    font-size: 19px;
+    line-height: 0.948em;
+  }
+
+  @media (min-width: @screen-desktop) {
+    padding-top: 145px;
+    padding-bottom: 45px;
+  }
 }
 
-.order-form__inner {
+.order-form__description-wrapper {
   .container();
-  outline: 2px dashed red; // временно для удобства
+  margin-bottom: 25px;
+
+  @media (min-width: @screen-desktop) {
+    width: 700px;
+    padding-right: 175px;
+    padding-left: 175px;
+  }
 }
 
 .order-form__description {
-  margin-bottom: 20px;
+  margin: 0;
   font-size: 13px;
   line-height: 1.846em;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 17px;
+    line-height: 1.765em;
+  }
 }
 
-.order-form__type {
-  padding-left: 60px;
+.order-form__submit-wrapper {
+  .container();
+
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 700px;
+    padding-right: 175px;
+    padding-left: 175px;
+  }
 }
 
-.order-form__color {
-  padding-left: 60px;
+.order-form__submit {
+  width: 100%;
+
+  @media (min-width: @screen-tablet) {
+    order: -1;
+    width: 230px;
+    margin: 0;
+  }
 }
 
 .order-form__requirement-text {
+  margin-bottom: 22px;
   font-size: 14px;
   line-height: 1.2;
+
+  @media (min-width: @screen-tablet) {
+    width: 334px;
+    margin-bottom: 0;
+    margin-left: auto;
+    font-size: 17px;
+    line-height: 1.765em;
+    text-align: right;
+  }
 }

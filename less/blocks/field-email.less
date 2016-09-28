@@ -1,13 +1,30 @@
 .field-email {
-  position: relative;
-  margin-bottom: 20px;
-  padding-top: 30px;
+  margin-bottom: 34px;
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
 
   @media (min-width: @screen-tablet) {
-    padding-left: 140px;
+    padding-bottom: 67px;
+    background-color: @gray-95;
+  }
+}
+
+.field-email__inner {
+  .container();
+  position: relative;
+  padding-top: 25px;
+
+  @media (min-width: @screen-tablet) {
+    width: 501px;
+    padding-top: 20px;
+    padding-left: 167px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 700px;
+    padding-right: 175px;
+    padding-left: 175px;
   }
 }
 
@@ -16,7 +33,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 0.941em;
@@ -25,5 +41,25 @@
 
   @media (min-width: @screen-tablet) {
     top: 40px;
+  }
+}
+
+input[type="email"] {
+  padding: 15px 0;
+  border: none;
+  border-bottom: 2px solid @black;
+  outline: none;
+
+  &:hover {
+    border-bottom: 2px solid @aqua;
+  }
+
+  // &:invalid {
+  //   border-bottom: 2px solid @lightred;
+  // }
+
+  @media (min-width: @screen-tablet) {
+    padding-left: 17px;
+    background-color: @gray-95;
   }
 }
