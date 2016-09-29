@@ -10,14 +10,21 @@
 
 
 .main-menu__logo {
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 14px;
+  display: flex;
   text-align: center;
   border-top: 1px solid @gray-93;
+  min-height: 78px;
+  justify-content: center;
+  align-items: center;
 
   img {
-    vertical-align: bottom;
+    display: block;
+    max-height: 78px;
+    max-width: 100%;
+
+    @media (min-width: @screen-tablet) {
+      max-height: none;
+    }
   }
 
   @media (min-width: @screen-tablet) {
