@@ -11,8 +11,12 @@
       <div class="page-header__inner">
         <nav class="main-menu  main-menu--closed  main-menu--no-js">
           <button class="main-menu__toggler" type="button">Открыть меню</button>
-          <a href="index.html" class="main-menu__logo">
-            <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35" title="Mishka">
+          <a class="main-menu__logo" href="index.html">
+            <picture>
+              <source media="(min-width:1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" alt="Mishka" title="Mishka">
+            </picture>
           </a>
           <ul class="main-menu__list">
             <li class="main-menu__list-item">
@@ -55,7 +59,14 @@
           <h2 class="catalog__title">Наши товары</h2>
           <section class="product-item">
             <a class="product-item__image-link" href="#">
-              <img class="product-item__image" src="img/photo-1-mobile@1x.jpg" alt="Вязаный зайчик" width="260" height="195">
+              <picture>
+                <source media="(min-width:1150px)" srcset="img/photo-1-desktop@1x.jpg 1x,
+                                                           img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/photo-1-tablet@1x.jpg 1x,
+                                                          img/photo-1-tablet@2x.jpg 2x">
+                <img class="product-item__image" src="img/photo-1-mobile@1x.jpg" 
+                                                 srcset="img/photo-1-mobile@2x.jpg 2x" alt="Вязаный зайчик" title="Вязаный зайчик">
+              </picture>
             </a>
             <div class="product-item__wrapper">
               <a class="product-item__title" href="#">Зайчик-попрыгайчик</a>
@@ -67,8 +78,15 @@
             </div>
           </section>
           <section class="product-item">
-            <a class="product-item__image-link" href="#">
-              <img class="product-item__image" src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+            
+              <picture>
+                <source media="(min-width:1150px)" srcset="img/photo-2-desktop@1x.jpg 1x,
+                                                           img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/photo-2-tablet@1x.jpg 1x,
+                                                          img/photo-2-tablet@2x.jpg 2x">
+                <img class="product-item__image" src="img/photo-2-mobile@1x.jpg" 
+                                                 srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья" title="Корзинка для белья">
+              </picture>
             </a>
             <div class="product-item__wrapper">
               <a class="product-item__title" href="#">Корзинка для белья</a>
@@ -81,7 +99,14 @@
           </section>
           <section class="product-item">
             <a class="product-item__image-link" href="#">
-              <img class="product-item__image" src="img/photo-3-mobile@1x.jpg" alt="Корзинка для игрушек" width="260" height="195">
+              <picture>
+                <source media="(min-width:1150px)" srcset="img/photo-3-desktop@1x.jpg 1x,
+                                                           img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/photo-3-tablet@1x.jpg 1x,
+                                                          img/photo-3-tablet@2x.jpg 2x">
+                <img class="product-item__image" src="img/photo-3-mobile@1x.jpg" 
+                                                 srcset="img/photo-3-mobile@2x.jpg 2x" alt="Корзинка для игрушек" title="Корзинка для игрушек">
+              </picture>
             </a>
             <div class="product-item__wrapper">
               <a class="product-item__title" href="#">Большая корзинка для игрушек</a>
@@ -114,8 +139,8 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__inner">
-        <a class="page-footer__logo" href="index.html">
-          <img src="img/logo-mobile.svg" alt="MISHKA" width="86" height="35">
+        <a class="page-footer__logo">
+          <img src="img/logo-footer.svg" alt="MISHKA" width="102" height="34">
         </a>
         <section class="social">
           <h2 class="social__title">Мы в соцсетях</h2>
@@ -131,10 +156,10 @@
             </li>
           </ul>
         </section>
-        <p class="page-footer__copyright">
+        <a class="page-footer__copyright" href="/htmlacademy.ru">
           Разработано:
-          <a class="page-footer__copyright-link" href="#">HTML Academy</a>
-        </p>
+          <span class="page-footer__copyright-logo">HTML Academy</span>
+        </a>
       </div>
     </footer>
     <script src="js/menu-toggler.js"></script>
