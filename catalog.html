@@ -116,9 +116,12 @@
             <h2 class="our-production__title">Процесс производства</h2>
           </div>
             <div class="our-production__video">
-              <video id="video" src="//htmlacademy.ru/assets/course73/uxtesting.mp4" controls preload="metadata" poster="img/video-mobile@1x.jpg" width="260" height="150" >
+              <video class="video" src="//htmlacademy.ru/assets/course73/uxtesting.mp4" preload="none" controls width="260" height="150" >
               </video>
+              <div class="video__controls">
+                <button class="video__toggler" type="button"></button>
               </div>
+            </div>
             <div class="our-production__text-wrapper">
               <p class="our-production__text">
                 По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
@@ -164,5 +167,6 @@
       </div>
     </footer>
     <script src="js/menu-toggler.js"></script>
+    <script src="js/video-controls.js"></script>
   </body>
 </html>
