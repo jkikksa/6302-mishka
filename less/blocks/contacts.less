@@ -1,7 +1,15 @@
 .contacts {
   position: relative;
-  padding-top: 70px;
-  padding-bottom: 50px;
+  padding-top: 35px;
+  padding-bottom: 40px;
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 65px;
+  }
 }
 
 .contacts__inner {
@@ -17,7 +25,7 @@
 .contacts__title {
   position: relative;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.667em;
@@ -26,12 +34,13 @@
   @media (min-width: @screen-tablet) {
     font-size: 43px;
     line-height: 1.163em;
+    margin-bottom: 45px;
 
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      right: 0;
+      top: -15px;
+      right: 2px;
       width: 46.68px;
     	height: 81.691px;
       background-image: url("../img/sprite.svg");
@@ -45,7 +54,8 @@
     line-height: 1.075em;
 
     &::after {
-      left: -100px;
+      left: -111px;
+      top: -10px;
     }
   }
 }
@@ -74,13 +84,16 @@
   width: 78px;
   padding: 0;
   vertical-align: top;
+  height: 57px;
 
   @media (min-width: @screen-tablet) and (max-width: (@screen-desktop - 1px)) {
     display: table-cell;
+    width: 77px;
   }
 
   @media (min-width: @screen-desktop) {
-    height: 50px;
+    height: 60px;
+    width: 75px;
   }
 }
 
@@ -95,14 +108,15 @@
 }
 
 .contacts__writeus {
+  font-size: 18px;
 
   @media (min-width: @screen-tablet) {
-    width: 190px;
+    width: 188px;
   }
 
   @media (min-width: @screen-desktop) {
-    width: 190px;
-    margin-top: 80px;
+    width: 186px;
+    margin-top: 78px;
     margin-left: 0;
   }
 }

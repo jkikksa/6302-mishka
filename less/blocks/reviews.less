@@ -1,3 +1,23 @@
+.reviews {
+  background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-size: 320px 7px;
+  padding-bottom: 52px;
+
+  @media (min-width: @screen-tablet) {
+    background-size: 750px 70px;
+    padding-top: 82px;
+    padding-bottom: 127px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    padding-bottom: 160px;
+    background-size: 1150px 34px;
+    margin-bottom: 102px;
+  }
+}
+
 .reviews__inner {
   .container();
   position: relative;
@@ -7,22 +27,36 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 100px;
-    padding-bottom: 150px;
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: 350px 457px;
-
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("../img/review@2x.jpg");
-    }
   }
 
   @media (min-width: @screen-desktop) {
     width: 875px;
-    padding-top: 135px;
     padding-left: 175px;
-    background-position: left;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    @media (min-width: @screen-tablet) {
+      width: 350px;
+      height: 457px;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: 350px 457px;
+      left: -50px;
+      top: -77px;
+      z-index: -1;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
+    }
+
+    @media (min-width: @screen-desktop) {
+      left: 0;
+      top: -70px;
+    }
   }
 }
 
@@ -54,6 +88,8 @@
 .reviews__text {
   margin: 0;
   margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 2em;
 
   @media (min-width: @screen-tablet) {
     font-size: 17px;
@@ -80,10 +116,11 @@
   line-height: 1.333em;
   color: @text-color--dark;
   font-style: normal;
+  margin-bottom: 2px;
 
   @media (min-width: @screen-tablet) {
-    margin-top: 55px;
-    margin-bottom: 8px;
+    margin-top: 57px;
+    margin-bottom: 4px;
     font-size: 17px;
     line-height: 1.412em;
   }
@@ -110,8 +147,15 @@
 
   @media (min-width: @screen-tablet) {
     order: -1;
-    width: 135px;
+    width: 132px;
     margin: 0;
+    margin-top: 3px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    order: -1;
+    width: 132px;
+    margin-top: 9px;
   }
 }
 

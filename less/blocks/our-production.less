@@ -1,5 +1,13 @@
 .our-production {
-  margin-bottom: 40px;
+  margin-bottom: 58px;
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 106px;
+  }
 }
 
 .our-production__inner {
@@ -26,12 +34,17 @@
 
   @media (min-width: @screen-tablet) {
     border-bottom: none;
+    padding-top: 38px;
+    padding-left: 107px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @screen-desktop) {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
@@ -51,8 +64,18 @@
     background-position: 70.75% 70.71240105540898%;
     background-image: url("../img/sprite.svg");
     background-repeat: no-repeat;
-    top: -40px;
-    left: 0;
+    top: 5px;
+    left: -58px;
+
+    @media (min-width: @screen-tablet) {
+      top: -5px;
+      left: -65px;
+    }
+
+    @media (min-width: @screen-desktop) {
+      top: -55px;
+      left: 0;
+    }
   }
 
   @media (min-width: @screen-tablet) {
@@ -92,7 +115,7 @@
     position: absolute;
     left: 0;
     width: 682px;
-    height: 455px;
+    height: 100%;
     background-image: url("../../img/video-desktop@1x.jpg");
     background-size: 682px 455px;
 
@@ -103,28 +126,47 @@
 }
 
 .our-production__text-wrapper {
-  padding: 30px 33px;
+  padding: 33px;
+  padding-top: 24px;
   border: 1px solid @gray-93;
   border-top-width: 0;
 
   @media (min-width: @screen-tablet) {
     padding-right: 42px;
     padding-left: 42px;
+    padding-top: 32px;
+    padding-bottom: 45px;
   }
 
   @media (min-width: @screen-desktop) {
     margin-top: auto;
+    padding-left: 80px;
+    padding-right: 58px;
   }
 }
 
 .our-production__text {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 13px;
-  line-height: 1.846em;
+  line-height: 1.847em;
 
   @media (min-width: @screen-tablet) {
     font-size: 15px;
     line-height: 2em;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    font-size: 15px;
+    line-height: 2em;
+    margin-bottom: 47px;
+  }
+}
+
+.our-production__order-link {
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 14px;
   }
 }

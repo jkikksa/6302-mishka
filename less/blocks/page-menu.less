@@ -30,7 +30,7 @@
   display: block;
   padding-top: 25px;
   padding-right: 160px;
-  padding-bottom: 30px;
+  padding-bottom: 31px;
   padding-left: 30px;
   font-weight: 700;
   font-size: 19px;
@@ -38,10 +38,9 @@
   color: @text-color--light;
   text-decoration: none;
   background-repeat: no-repeat;
-  background-position: 240px center;
 
   @media (min-width: @screen-tablet) {
-    padding-top: 30px;
+    padding-top: 28px;
     padding-right: 167px;
     padding-bottom: 30px;
     padding-left: 35px;
@@ -50,9 +49,9 @@
   }
 
   @media (min-width: @screen-desktop) {
-    padding-top: 30px;
+    padding-top: 28px;
     padding-right: 350px;
-    padding-bottom: 30px;
+    padding-bottom: 32px;
     padding-left: 40px;
     background-position: 450px 30px;
   }
@@ -61,8 +60,7 @@
     color: @text-color--light;
 
     @media (min-width: @screen-tablet) {
-      padding-top: 25px;
-      padding-bottom: 35px;
+      transform: translateY(-5px);
     }
   }
 
@@ -73,13 +71,22 @@
   &--interior {
     background-color: @aqua;
     background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_page-menu_interior.svg");
+    background-position: 244px 22px;
+
+    @media (min-width: @screen-tablet) {
+      background-position: 258px 30px;
+    }
+
+    @media (min-width: @screen-desktop) {
+      background-position-x: 450px;
+    }
+
 
     &:hover {
       background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_page-menu_interior--hover.svg");
 
       @media (min-width: @screen-tablet) {
-        box-shadow: 0 -5px 0 0 @aqua;
-        background-position-y: 25px;
+        box-shadow: 0 5px 0 0 @aqua;
       }
     }
 
@@ -91,13 +98,21 @@
   &--toys {
     background-color: @darkaqua;
     background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_page-menu_toy.svg");
+    background-position: 233px 20px;
+
+    @media (min-width: @screen-tablet) {
+      background-position: 240px 32px;
+    }
+
+    @media (min-width: @screen-desktop) {
+      background-position-x: 430px;
+    }
 
     &:hover {
       background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_page-menu_toy--hover.svg");
 
       @media (min-width: @screen-tablet) {
-        background-position-y: 25px;
-        box-shadow: 0 -5px 0 0 @darkaqua;
+        box-shadow: 0 5px 0 0 @darkaqua;
       }
     }
 
