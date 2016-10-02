@@ -6,6 +6,13 @@
   @media (min-width: @screen-tablet) {
     padding-top: 50px;
     padding-bottom: 60px;
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-fill.svg"),
+                      data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: left top, left bottom;
+    margin-top: -20px;
+    position: relative;
+    z-index: 2;
   }
 
   @media (min-width: @screen-desktop) {
@@ -72,7 +79,7 @@
     right: 60px;
     width: 80px;
   }
-  
+
   @media (min-width: @screen-desktop) {
     left: 0;
   }

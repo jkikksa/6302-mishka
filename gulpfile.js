@@ -9,9 +9,12 @@ var server = require("browser-sync").create();
 var csscomb = require("gulp-csscomb");
 var svgSprite = require("gulp-svg-sprite");
 
-var config = { 
+var config = {
   mode: {
     css: {
+      prefix: ".",
+      dimensions: "-d",
+      layout: "diagonal",
       render: {
         less: true
       }

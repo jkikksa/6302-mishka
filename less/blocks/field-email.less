@@ -49,9 +49,18 @@ input[type="email"] {
   border: none;
   border-bottom: 2px solid @black;
   outline: none;
+  background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-email_mail.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
 
   &:hover {
     border-bottom: 2px solid @aqua;
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-email_mail--hover.svg");
+  }
+
+  &:focus {
+    border-bottom: 2px solid @aqua;
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-email_mail--hover.svg");
   }
 
   // &:invalid {

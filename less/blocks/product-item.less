@@ -92,7 +92,8 @@
 .product-item__buy-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  align-items: center;
+  padding-top: 10px;
   border-top: 1px solid @gray-93;
 
   @media (min-width: @screen-tablet) {
@@ -115,8 +116,18 @@
 
 .product-item__buy {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   font-size: 0;
-  outline: 1px dashed red; // временно для удобства
+  background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_product-item_cart.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &:hover {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_product-item_cart--hover.svg");
+  }
+
+  &:active {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_product-item_cart--active.svg");
+  }
 }
