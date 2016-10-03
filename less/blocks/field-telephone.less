@@ -56,6 +56,7 @@ input[type="tel"] {
   border: none;
   border-bottom: 2px solid @black;
   outline: none;
+  font-weight: 400;
 
   &:hover {
     background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-telephone_phone--hover.svg");
@@ -65,6 +66,14 @@ input[type="tel"] {
   &:focus {
     background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-telephone_phone--hover.svg");
     border-bottom: 2px solid @aqua;
+  }
+
+  &::placeholder {
+    font-size: 19px;
+    line-height: 0.948em;
+    color: @text-color;
+    opacity: 0.3;
+    font-weight: 400;
   }
 
   // &:invalid {

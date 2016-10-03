@@ -20,6 +20,7 @@
     border: 2px solid @gray-27;
     outline: none;
     resize: vertical;
+    font-weight: 400;
 
     @media (min-width: @screen-tablet) {
       min-height: 141px;
@@ -27,6 +28,14 @@
 
     &:hover {
       border: 2px solid @aqua;
+    }
+
+    &::placeholder {
+      font-size: 19px;
+      line-height: 0.948em;
+      color: @text-color;
+      opacity: 0.3;
+      font-weight: 400;
     }
 
     // &:invalid {
