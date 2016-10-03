@@ -33,39 +33,39 @@
   border: 1px solid @gray-93;
 
   @media (min-width: @screen-tablet) {
-    border-bottom: none;
     padding-top: 38px;
-    padding-left: 107px;
     padding-bottom: 0;
+    padding-left: 107px;
+    border-bottom: none;
   }
 
   @media (min-width: @screen-desktop) {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    padding-left: 80px;
     padding-right: 80px;
+    padding-left: 80px;
   }
 }
 
 .our-production__title {
+  position: relative;
   margin: 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 1.412em;
   color: @text-color--dark;
-  position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    width: 32px;
-  	height: 32px;
-    background-position: 70.75% 70.71240105540898%;
-    background-image: url("../img/sprite.svg");
-    background-repeat: no-repeat;
     top: 5px;
     left: -58px;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: 70.75% 70.71240105540898%;
 
     @media (min-width: @screen-tablet) {
       top: -5px;
@@ -113,8 +113,8 @@
 
   @media (min-width: @screen-desktop) {
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 682px;
     height: 100%;
     background-image: url("../../img/video-desktop@1x.jpg");
@@ -133,16 +133,16 @@
   border-top-width: 0;
 
   @media (min-width: @screen-tablet) {
-    padding-right: 42px;
-    padding-left: 42px;
     padding-top: 32px;
+    padding-right: 42px;
     padding-bottom: 45px;
+    padding-left: 42px;
   }
 
   @media (min-width: @screen-desktop) {
     margin-top: auto;
-    padding-left: 80px;
     padding-right: 58px;
+    padding-left: 80px;
   }
 }
 
@@ -153,15 +153,15 @@
   line-height: 1.847em;
 
   @media (min-width: @screen-tablet) {
+    margin-bottom: 36px;
     font-size: 15px;
     line-height: 2em;
-    margin-bottom: 36px;
   }
 
   @media (min-width: @screen-desktop) {
+    margin-bottom: 47px;
     font-size: 15px;
     line-height: 2em;
-    margin-bottom: 47px;
   }
 }
 

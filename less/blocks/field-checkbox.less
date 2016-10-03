@@ -70,7 +70,6 @@
     width: 239px;
     margin-bottom: 25px;
 
-
     &:nth-last-child(2) {
       margin-bottom: 0;
     }
@@ -94,10 +93,10 @@ input[type="checkbox"] {
 .field-checkbox__text {
   position: relative;
   display: block;
-  cursor: pointer;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 62px;
+  cursor: pointer;
 
   @media (min-width: @screen-tablet) {
     padding-top: 17px;
@@ -108,8 +107,8 @@ input[type="checkbox"] {
   &::before {
     content: "";
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 36px;
     height: 36px;
     border: 2px solid @gray-27;
