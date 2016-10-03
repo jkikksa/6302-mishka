@@ -1,16 +1,36 @@
 .add-to-cart {
   display: none;
   width: 260px;
-  height: 328px;
+  height: 306px;
   position: fixed;
-  margin-left: -130px;
-  top: 30%;
+  top: 50%;
   left: 50%;
-  outline: 2px dashed red;
+  margin-left: -160px;
+  margin-top: -168px;
   background-color: @white;
   padding-left: 30px;
   padding-right: 30px;
   z-index: 100;
+  border-top: 1px solid @gray-78;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  padding-top: 30px;
+
+  @media (max-width: @screen-mobile) {
+    left: 0;
+    margin-left: 0;
+  }
+
+  @media (min-width: @screen-tablet) {
+    width: 350px;
+    padding-left: 108px;
+    padding-right: 108px;
+    border: 1px solid @gray-78;
+    margin-left: -284px;
+  }
+
+  &--show {
+    display: block;
+  }
 
   input[type="radio"] {
     display: none;
@@ -23,18 +43,25 @@
   text-transform: uppercase;
   color: @text-color--dark;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  @media (min-width: @screen-tablet) {
+    font-size: 29px;
+    line-height: 1.9em;
+  }
 }
 .add-to-cart__form-title {
   font-size: 15px;
   line-height: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   text-align: center;
 }
 
 .add-to-cart__field-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .add-to-cart__radio-text {
@@ -48,6 +75,14 @@
   font-size: 17px;
   line-height: 1em;
   font-weight: 700;
+
+  &:hover {
+    border-color: @gray-78;
+  }
+
+  @media (min-width: @screen-tablet) {
+    width: 108px;
+  }
 }
 
 input[type="radio"]:checked + .add-to-cart__radio-text {
@@ -60,11 +95,15 @@ input[type="radio"]:checked + .add-to-cart__radio-text {
   border: none;
   outline: none;
   color: @text-color--light;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   text-transform: uppercase;
   cursor: pointer;
   font-size: 17px;
   line-height: 1em;
   font-weight: 700;
+
+  &:hover {
+    background-color: @darkaqua;
+  }
 }
