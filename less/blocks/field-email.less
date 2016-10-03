@@ -1,5 +1,5 @@
 .field-email {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
@@ -42,6 +42,10 @@
   @media (min-width: @screen-tablet) {
     top: 40px;
   }
+
+  @media (min-width: @screen-desktop) {
+    left: 55px;
+  }
 }
 
 input[type="email"] {
@@ -51,7 +55,7 @@ input[type="email"] {
   outline: none;
   background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-email_mail.svg");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 223px center;
 
   &:hover {
     border-bottom: 2px solid @aqua;
@@ -70,5 +74,10 @@ input[type="email"] {
   @media (min-width: @screen-tablet) {
     padding-left: 17px;
     background-color: @gray-95;
+    background-position: 448px 15px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    background-position: 666px 15px;
   }
 }

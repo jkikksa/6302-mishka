@@ -21,6 +21,10 @@
     outline: none;
     resize: vertical;
 
+    @media (min-width: @screen-tablet) {
+      min-height: 141px;
+    }
+
     &:hover {
       border: 2px solid @aqua;
     }
@@ -61,6 +65,10 @@
   text-transform: uppercase;
 
   @media (min-width: @screen-tablet) {
-    top: 40px;
+    top: 50px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    left: 62px;
   }
 }

@@ -1,11 +1,11 @@
 .field-radio {
-  margin-bottom: 22px;
+  margin-bottom: 27px;
   font: inherit;
   font-weight: 700;
   color: @text-color--dark;
 
   @media (min-width: @screen-tablet) {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
     padding-top: 30px;
     padding-bottom: 35px;
   }
@@ -41,29 +41,35 @@
   text-transform: uppercase;
 
   @media (min-width: @screen-tablet) {
-    top: 50px;
+    top: 20px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    left: 62px;
   }
 }
 
 .field-radio__wrapper {
   display: block;
   margin-bottom: 10px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-left: 62px;
 
   &:last-child {
     margin-bottom: 0;
+
+    .field-radio__text::after {
+      top: -4px;
+    }
   }
 
   @media (min-width: @screen-tablet) {
     margin-bottom: 26px;
-    padding-top: 17px;
-    padding-bottom: 17px;
-    padding-left: 82px;
 
     &:last-child {
       margin-bottom: 0;
+
+      .field-radio__text::after {
+        top: 2px;
+      }
     }
   }
 }
@@ -74,15 +80,25 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="radio"] + .field-radio__text {
+.field-radio__text {
   position: relative;
   cursor: pointer;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 62px;
+  display: block;
+
+  @media (min-width: @screen-tablet) {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 82px;
+  }
 
   &::after {
     content: "";
     position: absolute;
-    top: -6px;
-    left: -60px + 2px; // 2px разницы т.к. внешний круг это тень
+    top: 2px;
+    left: 2px; // 2px разницы т.к. внешний круг это тень
     width: 16px;
     height: 16px;
     background-color: @white;
@@ -91,8 +107,8 @@ input[type="radio"] + .field-radio__text {
     box-shadow: 0 0 0 2px @gray-27;
 
     @media (min-width: @screen-tablet) {
-      top: -11px;
-      left: -80px;
+      top: 5px;
+      left: 2px;
       width: 22px;
       height: 22px;
       border: 13px solid @white;

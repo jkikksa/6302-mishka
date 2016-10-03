@@ -17,7 +17,7 @@
 
   @media (min-width: @screen-tablet) {
     width: 501px;
-    padding-top: 45px;
+    padding-top: 46px;
     padding-left: 167px;
   }
 
@@ -40,7 +40,11 @@
   text-transform: uppercase;
 
   @media (min-width: @screen-tablet) {
-    top: 40px;
+    top: 70px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    left: 65px;
   }
 }
 
@@ -51,7 +55,7 @@ input[type="tel"] {
   outline: none;
   background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-telephone_phone.svg");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 225px 10px;
 
   &:hover {
     border-bottom: 2px solid @aqua;
@@ -70,5 +74,10 @@ input[type="tel"] {
   @media (min-width: @screen-tablet) {
     padding-left: 17px;
     background-color: @gray-95;
+    background-position: 450px 15px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    background-position: 668px 15px;
   }
 }
