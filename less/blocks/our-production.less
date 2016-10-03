@@ -23,6 +23,7 @@
     width: 368px;
     min-height: 455px;
     padding-left: 682px;
+    display: block;
   }
 }
 
@@ -40,11 +41,10 @@
   }
 
   @media (min-width: @screen-desktop) {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
     padding-right: 80px;
     padding-left: 80px;
+    padding-top: 97px;
+    padding-bottom: 33px;
   }
 }
 
@@ -81,10 +81,6 @@
   @media (min-width: @screen-tablet) {
     font-size: 20px;
     line-height: 1.2em;
-  }
-
-  @media (min-width: @screen-desktop) {
-    margin-top: auto;
   }
 }
 
@@ -140,9 +136,9 @@
   }
 
   @media (min-width: @screen-desktop) {
-    margin-top: auto;
     padding-right: 58px;
     padding-left: 80px;
+    padding-top: 0;
   }
 }
 
