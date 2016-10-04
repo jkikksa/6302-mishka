@@ -166,7 +166,29 @@
         </a>
       </div>
     </footer>
+    <div class="add-to-cart">
+      <h2 class="add-to-cart__title">Добавить в корзину</h2>
+      <form class="add-to-cart__form" action="#" method="get">
+        <div class="add-to-cart__form-title">Выберите размер:</div>
+        <div class="add-to-cart__field-wrapper">
+          <label class="add-to-cart__radio-wrapper">
+            <input type="radio" name="add-to-cart" value="s">
+            <span class="add-to-cart__radio-text">S</span>
+          </label>
+          <label class="add-to-cart__radio-wrapper">
+            <input type="radio" name="add-to-cart" value="m" checked>
+            <span class="add-to-cart__radio-text">M</span>
+          </label>
+          <label class="add-to-cart__radio-wrapper">
+            <input type="radio" name="add-to-cart" value="l">
+            <span class="add-to-cart__radio-text">L</span>
+          </label>
+        </div>
+        <input class="add-to-cart__submit" type="submit" value="Добавить">
+      </form>
+    </div>
+    <div class="overlay"></div>
     <script src="js/menu-toggler.js"></script>
-    <script src="js/video-controls.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

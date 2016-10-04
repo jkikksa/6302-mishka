@@ -5,6 +5,9 @@ if (document.querySelector(".product-of-the-week__order-link")) {
   var button = document.querySelector(".product-of-the-week__order-link");
 }
 
+else if (document.querySelector(".product-item__buy")) {
+  button = document.querySelector(".product-item__buy");
+}
 
 button.addEventListener("click", function(event) {
   event.preventDefault();
