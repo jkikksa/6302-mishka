@@ -48,7 +48,7 @@
   }
 }
 
-input[type="email"] {
+.field-email__input {
   padding: 15px 0;
   background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-email_mail.svg");
   background-repeat: no-repeat;
@@ -76,10 +76,6 @@ input[type="email"] {
     font-weight: 400;
   }
 
-  // &:invalid {
-  //   border-bottom: 2px solid @lightred;
-  // }
-
   @media (min-width: @screen-tablet) {
     padding-left: 17px;
     background-color: @gray-95;
@@ -88,5 +84,9 @@ input[type="email"] {
 
   @media (min-width: @screen-desktop) {
     background-position: 666px 15px;
+  }
+
+  &--error {
+    border-bottom: 2px solid @lightred;
   }
 }
