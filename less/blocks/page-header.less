@@ -3,6 +3,16 @@
 }
 
 .page-header__inner {
-  .container();
   position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @screen-tablet) {
+    width: 668px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 1050px;
+  }
 }
