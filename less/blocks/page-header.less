@@ -3,12 +3,16 @@
 }
 
 .page-header__inner {
-  .container();
   position: relative;
 
-  @media (max-width: (@screen-tablet - 1px)) {
-    width: @screen-mobile;
-    padding-right: 0;
-    padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @screen-tablet) {
+    width: 668px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 1050px;
   }
 }

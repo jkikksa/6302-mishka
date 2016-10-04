@@ -1,15 +1,16 @@
 .product-item {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 
   @media (min-width: @screen-tablet) {
     display: flex;
     min-height: 334px;
-    margin-bottom: 50px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @screen-desktop) {
     flex-direction: column;
     width: 315px;
+    margin-bottom: 0;
   }
 }
 
@@ -38,7 +39,7 @@
 .product-item__wrapper {
   padding-top: 24px;
   padding-right: 27px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   padding-left: 27px; // отступ в карточке товара
   border: 1px solid @gray-93;
 
@@ -46,12 +47,17 @@
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
+  &:active {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+
   @media (min-width: @screen-tablet) {
     display: flex;
     flex-direction: column;
-    width: 266px;
-    padding-right: 33px;
-    padding-left: 33px;
+    width: 276px;
+    padding-top: 25px;
+    padding-right: 28px;
+    padding-left: 28px;
   }
 
   @media (min-width: @screen-desktop) {
@@ -61,10 +67,12 @@
 }
 
 .product-item__title {
+  display: block;
   margin: 0;
+  margin-bottom: 6px;
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.411em;
+  line-height: 1.412em;
   color: @text-color--dark;
 
   @media (min-width: @screen-tablet) {
@@ -74,6 +82,7 @@
   }
 
   @media (min-width: @screen-desktop) {
+    margin-bottom: 4px;
     padding-right: 0;
   }
 }
@@ -87,12 +96,17 @@
     font-size: 15px;
     line-height: 2em;
   }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 15px;
+  }
 }
 
 .product-item__buy-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  align-items: center;
+  padding-top: 12px;
   border-top: 1px solid @gray-93;
 
   @media (min-width: @screen-tablet) {
@@ -115,8 +129,18 @@
 
 .product-item__buy {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   font-size: 0;
-  outline: 1px dashed red; // временно для удобства
+  background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_product-item_cart.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  &:hover {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_product-item_cart--hover.svg");
+  }
+
+  &:active {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_product-item_cart--active.svg");
+  }
 }

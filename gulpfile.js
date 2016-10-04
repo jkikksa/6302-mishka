@@ -6,7 +6,27 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var csscomb = require('gulp-csscomb');
+var csscomb = require("gulp-csscomb");
+var svgSprite = require("gulp-svg-sprite");
+
+var config = {
+  mode: {
+    css: {
+      prefix: ".",
+      dimensions: "-d",
+      layout: "diagonal",
+      render: {
+        less: true
+      }
+    }
+  }
+};
+
+gulp.task("svgsprite", function() {
+  gulp.src("img/sprite/*.svg")
+  .pipe(svgSprite(config))
+  .pipe(gulp.dest("out"));
+});
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -25,10 +45,10 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task('comb', function() {
-  return gulp.src('less/blocks/*.less')
+gulp.task("comb", function() {
+  return gulp.src("less/blocks/*.less")
     .pipe(csscomb())
-    .pipe(gulp.dest('./less/blocks'));
+    .pipe(gulp.dest("./less/blocks"));
 });
 
 gulp.task("serve", ["style"], function() {

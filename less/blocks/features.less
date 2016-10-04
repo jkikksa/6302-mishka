@@ -1,5 +1,7 @@
 .features {
-  padding: 20px 0;
+  margin-bottom: 10px;
+  padding-top: 27px;
+  padding-bottom: 20px;
 }
 
 .features__inner {
@@ -54,13 +56,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 5px;
-    left: 0;
-    width: 40px;
-    height: 40px;
+    background-image: url("../img/sprite.svg");
     background-repeat: no-repeat;
-    background-position: left top;
-    outline: 1px dashed red;
   }
 
   @media (min-width: @screen-tablet) {
@@ -79,7 +76,11 @@
     order: 1;
 
     &::before {
-      background-image: url("../img/icon-feature-1.svg");
+      top: 5px;
+      left: 10px;
+      width: 31.972px;
+      height: 37.301px;
+      background-position: 20.498565100442967% 31.308620039122395%;
     }
   }
 
@@ -87,16 +88,23 @@
     order: 3;
 
     &::before {
-      background-image: url("../img/icon-feature-3.svg");
+      top: 5px;
+      left: 0;
+      width: 46.575px;
+      height: 27.332px;
+      background-position: 46.96114678601543% 56.29867489600384%;
     }
-
   }
 
   &--heart {
     order: 5;
 
     &::before {
-      background-image: url("../img/icon-feature-5.svg");
+      top: 10px;
+      left: 7px;
+      width: 33.05px;
+      height: 27.857px;
+      background-position: 36.84672264694824% 49.067841510871915%;
     }
   }
 
@@ -104,7 +112,11 @@
     order: 2;
 
     &::before {
-      background-image: url("../img/icon-feature-2.svg");
+      top: 7px;
+      left: 3px;
+      width: 34.373px;
+      height: 34.373px;
+      background-position: 11.820122878979546% 21.772204329482484%;
     }
   }
 
@@ -112,7 +124,11 @@
     order: 4;
 
     &::before {
-      background-image: url("../img/icon-feature-4.svg");
+      top: 9px;
+      left: -7px;
+      width: 54.156px;
+      height: 23.183px;
+      background-position: 60.34236351510147% 62.916272365574486%;
     }
   }
 
@@ -120,7 +136,11 @@
     order: 6;
 
     &::before {
-      background-image: url("../img/icon-feature-6.svg");
+      top: 6px;
+      left: 3px;
+      width: 32.666px;
+      height: 32.486px;
+      background-position: 28.5475316401809% 40.949608204716334%;
     }
   }
 }

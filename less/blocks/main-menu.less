@@ -10,26 +10,41 @@
 
 
 .main-menu__logo {
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 14px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 78px;
   border-top: 1px solid @gray-93;
 
   img {
-    vertical-align: bottom;
+    display: block;
+    max-width: 100%;
+    max-height: 78px;
+
+    @media (min-width: @screen-tablet) {
+      max-height: none;
+    }
   }
 
   @media (min-width: @screen-tablet) {
     flex-grow: 1;
-    text-align: left;
-    border-top: none;
+    justify-content: flex-start;
     align-self: center;
+    min-height: auto;
     padding: 0;
+    border-top: none;
+  }
+}
+
+//Выбирает только логотипы с ссылками
+a[href] > .main-menu__logo-image {
+
+  &:hover {
+    opacity: 0.6;
   }
 
-  @media (min-width: @screen-desktop) {
-    text-align: center;
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -39,13 +54,14 @@
   @media (min-width: @screen-tablet) {
     display: flex;
     flex-shrink: 0;
+    flex-wrap: wrap;
     order: 1;
+    width: 334px;
   }
 
   @media (min-width: @screen-desktop) {
-    flex-wrap: wrap;
     order: -1;
-    width: 400px;
+    width: 450px;
   }
 }
 
@@ -61,20 +77,18 @@
 
   @media (min-width: @screen-tablet) {
     width: 167px;
-    padding-right: 0;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 0;
+    padding: 18px 0;
     font-size: 15px;
     line-height: 1.6em;
     border-bottom: none;
   }
 
   @media (min-width: @screen-desktop) {
+    width: 184px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-size: 17px;
     line-height: 1.411em;
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
 
   &--active {
@@ -85,20 +99,25 @@
   }
 }
 
-// тут задается рамка сверху у первого элемента меню
+// тут задаются стили у первого элемента меню
 .main-menu__list-item:first-child {
+
+  @media (min-width: @screen-desktop) {
+    margin-right: 35px;
+    border-right: 1px solid @gray-93;
+  }
 
   .main-menu__link {
     padding-bottom: 27px;
     border-top: 1px solid @gray-93;
 
     @media (min-width: @screen-tablet) {
-      padding-bottom: 20px;
+      padding-bottom: 18px;
       border-top: 0;
     }
 
     @media (min-width: @screen-desktop) {
-      padding-bottom: 30px;
+      padding-bottom: 32px;
       border-top: 0;
     }
   }
@@ -116,13 +135,16 @@
   .main-menu__link {
 
     @media (min-width: @screen-desktop) {
-      width: 175px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 18px;
+      padding-bottom: 18px;
       font-size: 15px;
       line-height: 1.6em;
     }
   }
+}
+
+.main-menu__aux-items:first-child {
+  margin-right: 35px;
 }
 
 .main-menu__shipment {
@@ -131,8 +153,7 @@
   @media (min-width: @screen-tablet) {
     display: block;
     order: 3;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 18px 0;
     font-size: 15px;
     line-height: 1.6em;
   }
@@ -140,7 +161,7 @@
 
 .main-menu__toggler {
   position: absolute;
-  top: 10px;
+  top: 9px;
   right: 0;
   z-index: 9;
   width: 90px;
@@ -152,7 +173,6 @@
   background-position: 0 0;
   border: none;
   outline: none;
-  outline: 1px dashed red;
   cursor: pointer;
 
   @media (min-width: @screen-tablet) {
@@ -166,7 +186,7 @@
   .main-menu--closed {
 
     .main-menu__toggler {
-      background-image: url("../img/icon-menu-open.svg");
+      background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_main-menu_open.svg");
       background-position: center center;
     }
 
@@ -186,7 +206,7 @@
     width: 100%;
 
     .main-menu__toggler {
-      background-image: url("../img/icon-menu-close.svg");
+      background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_main-menu_close.svg");
       background-position: center center;
     }
 

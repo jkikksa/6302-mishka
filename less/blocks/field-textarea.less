@@ -11,24 +11,6 @@
   @media (min-width: @screen-desktop) {
     margin-bottom: 40px;
   }
-
-  textarea {
-    min-height: 140px;
-    padding: 15px;
-    font-size: 17px;
-    line-height: 1.059em;
-    border: 2px solid @gray-27;
-    outline: none;
-    resize: vertical;
-
-    &:hover {
-      border: 2px solid @aqua;
-    }
-
-    // &:invalid {
-    //   border: 2px solid @lightred;
-    // }
-  }
 }
 
 .field-textarea__inner {
@@ -61,6 +43,45 @@
   text-transform: uppercase;
 
   @media (min-width: @screen-tablet) {
-    top: 40px;
+    top: 50px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    left: 62px;
+  }
+}
+
+.field-textarea__input {
+  min-height: 140px;
+  padding: 15px;
+  font-size: 17px;
+  line-height: 1.059em;
+  border: 2px solid @gray-27;
+  outline: none;
+  resize: vertical;
+  font-weight: 400;
+
+  @media (min-width: @screen-tablet) {
+    min-height: 141px;
+  }
+
+  &:hover {
+    border: 2px solid @aqua;
+  }
+
+  &:focus {
+    border-bottom: 2px solid @aqua;
+  }
+
+  &::placeholder {
+    font-size: 19px;
+    line-height: 0.948em;
+    color: @text-color;
+    opacity: 0.3;
+    font-weight: 400;
+  }
+
+  &--error {
+    border-bottom: 2px solid @lightred;
   }
 }

@@ -17,7 +17,7 @@
 
   @media (min-width: @screen-tablet) {
     width: 501px;
-    padding-top: 45px;
+    padding-top: 46px;
     padding-left: 167px;
   }
 
@@ -40,26 +40,53 @@
   text-transform: uppercase;
 
   @media (min-width: @screen-tablet) {
-    top: 40px;
+    top: 70px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    left: 65px;
   }
 }
 
-input[type="tel"] {
+.field-telephone__input {
   padding: 15px 0;
+  background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-telephone_phone.svg");
+  background-repeat: no-repeat;
+  background-position: 225px 10px;
   border: none;
   border-bottom: 2px solid @black;
   outline: none;
+  font-weight: 400;
 
   &:hover {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-telephone_phone--hover.svg");
     border-bottom: 2px solid @aqua;
   }
 
-  // &:invalid {
-  //   border-bottom: 2px solid @lightred;
-  // }
+  &:focus {
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_field-telephone_phone--hover.svg");
+    border-bottom: 2px solid @aqua;
+  }
+
+  &::placeholder {
+    font-size: 19px;
+    line-height: 0.948em;
+    color: @text-color;
+    opacity: 0.3;
+    font-weight: 400;
+  }
 
   @media (min-width: @screen-tablet) {
     padding-left: 17px;
     background-color: @gray-95;
+    background-position: 450px 15px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    background-position: 668px 15px;
+  }
+
+  &--error {
+    border-bottom: 2px solid @lightred;
   }
 }

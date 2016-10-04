@@ -4,30 +4,41 @@
 
   @media (min-width: @screen-tablet) {
     position: absolute;
-    right: 50px;
-    bottom: 100px;
+    right: 0;
+    bottom: 33px;
+    margin-bottom: 0;
   }
 }
 
 .slider-controls__arrow {
   flex-grow: 1;
   width: 130px;
-  min-height: 50px;
+  min-height: 52px;
   background-color: @white;
   background-repeat: no-repeat;
   background-position: center center;
   border: 1px solid @gray-93;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--prev {
-    background-image: url("../img/icon-left-arrow.svg");
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_slider-controls_left-arrow.svg");
   }
 
   &--next {
-    background-image: url("../img/icon-right-arrow.svg");
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_slider-controls_right-arrow.svg");
   }
 
-  &:hover {
-    background-color: @gray-93; //временно для удобства
-    cursor: pointer;
+  @media (min-width: @screen-tablet) {
+    width: 87px;
+    border: none;
   }
 }

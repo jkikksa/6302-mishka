@@ -3,7 +3,15 @@
   border-top: 1px solid @gray-87;
 
   @media (min-width: @screen-tablet) {
-    margin-top: -65px;
+    margin-top: -61px;
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    background-size: 775px 23px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    background-size: 1150px 34px;
   }
 }
 
@@ -13,7 +21,12 @@
   padding-bottom: 78px;
 
   @media (min-width: @screen-tablet) {
-    padding-top: 100px;
+    padding-top: 96px;
+    padding-bottom: 92px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    padding-bottom: 118px;
   }
 }
 
