@@ -16,9 +16,19 @@
   background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/data-uri/icon_video_play.svg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: contain;
   border: none;
   outline: none;
   cursor: pointer;
+
+  &:hover {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  &:active {
+    transform: scale3d(0.8, 0.8, 0.8);
+    opacity: 0.3;
+  }
 }
 
 .video--playing  .video__toggler {
