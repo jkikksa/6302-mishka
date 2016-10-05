@@ -13,4 +13,4 @@ toggler.addEventListener("click", function(event) {
     menu.classList.add("main-menu--closed");
     menu.classList.remove("main-menu--opened");
   }
-})
+});

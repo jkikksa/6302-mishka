@@ -1,6 +1,14 @@
 .product-item {
   margin-bottom: 31px;
 
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+
   @media (min-width: @screen-tablet) {
     display: flex;
     min-height: 334px;
@@ -43,13 +51,7 @@
   padding-left: 27px; // отступ в карточке товара
   border: 1px solid @gray-93;
 
-  &:hover {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-  }
 
-  &:active {
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
-  }
 
   @media (min-width: @screen-tablet) {
     display: flex;

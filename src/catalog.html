@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>HTML Academy: Мишка. Каталог товаров.</title>
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header">
@@ -22,7 +22,7 @@
           </a>
           <ul class="main-menu__list">
             <li class="main-menu__list-item">
-              <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
+              <a class="main-menu__link  main-menu__link--active">Каталог товаров</a>
             </li>
             <li class="main-menu__list-item">
               <a class="main-menu__link" href="form.html">Вязание на заказ</a>
@@ -50,13 +50,88 @@
         </nav>
       </div>
     </header>
-    <main style="min-height: calc(100vh - 224px)">
+    <main>
       <div class="inner-page-title">
         <div class="inner-page-title__wrapper">
-          <h1 class="inner-page-title__text">Страница с подробным описанием товара</h1>
+          <h1 class="inner-page-title__text">Каталог товаров</h1>
         </div>
       </div>
-      </div>
+      <section class="catalog">
+        <div class="catalog__inner">
+          <h2 class="catalog__title">Наши товары</h2>
+          <section class="product-item">
+            <a class="product-item__image-link" href="product.html">
+              <picture>
+                <source media="(min-width:1150px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img class="product-item__image" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Вязаный зайчик" title="Вязаный зайчик">
+              </picture>
+            </a>
+            <div class="product-item__wrapper">
+              <a class="product-item__title" href="product.html">Зайчик-попрыгайчик</a>
+              <div class="product-item__description">Рост 30 см, вес 200 г</div>
+              <div class="product-item__buy-wrapper">
+                <div class="product-item__price">1 200 руб.</div>
+                <a class="product-item__buy" href="product.html">Добавить в корзину</a>
+              </div>
+            </div>
+          </section>
+          <section class="product-item">
+            <a class="product-item__image-link" href="product.html">
+              <picture>
+                <source media="(min-width:1150px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                <img class="product-item__image" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья" title="Корзинка для белья">
+              </picture>
+            </a>
+            <div class="product-item__wrapper">
+              <a class="product-item__title" href="product.html">Корзинка для белья</a>
+              <div class="product-item__description">Диаметр 15 см, высота 10 см</div>
+              <div class="product-item__buy-wrapper">
+                <div class="product-item__price">690 руб.</div>
+                <a class="product-item__buy" href="product.html">Добавить в корзину</a>
+              </div>
+            </div>
+          </section>
+          <section class="product-item">
+            <a class="product-item__image-link" href="product.html">
+              <picture>
+                <source media="(min-width:1150px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img class="product-item__image" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Корзинка для игрушек" title="Корзинка для игрушек">
+              </picture>
+            </a>
+            <div class="product-item__wrapper">
+              <a class="product-item__title" href="product.html">Большая корзинка для игрушек</a>
+              <div class="product-item__description">Диаметр 30 см, высота 30 см</div>
+              <div class="product-item__buy-wrapper">
+                <div class="product-item__price">1 500 руб.</div>
+                <a class="product-item__buy" href="product.html">Добавить в корзину</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="our-production">
+        <div class="our-production__inner">
+          <div class="our-production__title-wrapper">
+            <h2 class="our-production__title">Процесс производства</h2>
+          </div>
+            <div class="our-production__video">
+              <video class="video" src="#" poster="img/video-desktop@1x.jpg" preload="none" width="260" height="150" >
+              </video>
+              <div class="video__controls">
+                <button class="video__toggler" type="button"></button>
+              </div>
+            </div>
+            <div class="our-production__text-wrapper">
+              <p class="our-production__text">
+                По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+              </p>
+              <a class="button our-production__order-link" href="form.html">Сделать заказ</a>
+            </div>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__inner">
@@ -93,5 +168,28 @@
         </a>
       </div>
     </footer>
+    <div class="add-to-cart">
+      <h2 class="add-to-cart__title">Добавить в корзину</h2>
+      <form class="add-to-cart__form" action="#" method="get">
+        <div class="add-to-cart__form-title">Выберите размер:</div>
+        <div class="add-to-cart__field-wrapper">
+          <label class="add-to-cart__radio-wrapper">
+            <input type="radio" name="add-to-cart" value="s">
+            <span class="add-to-cart__radio-text">S</span>
+          </label>
+          <label class="add-to-cart__radio-wrapper">
+            <input type="radio" name="add-to-cart" value="m" checked>
+            <span class="add-to-cart__radio-text">M</span>
+          </label>
+          <label class="add-to-cart__radio-wrapper">
+            <input type="radio" name="add-to-cart" value="l">
+            <span class="add-to-cart__radio-text">L</span>
+          </label>
+        </div>
+        <input class="add-to-cart__submit" type="submit" value="Добавить">
+      </form>
+    </div>
+    <div class="overlay"></div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
