@@ -44,7 +44,7 @@ gulp.task("imagemin", function() {
      imagemin.optipng({optimizationLevel: 3}),
      imagemin.jpegtran({progressive: true})
    ]))
-   .pipe(gulp.dest("img"));
+   .pipe(gulp.dest("src/img"));
 });
 
 gulp.task("serve", function() {
