@@ -4,6 +4,8 @@ var gulp = require("gulp");
 var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
+var svgstore = require("gulp-svgstore");
+var svgmin = require("gulp-svgmin");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var imagemin = require("gulp-imagemin");
@@ -39,11 +41,27 @@ gulp.task("style", function() {
 });
 
 gulp.task("imagemin", function() {
-  return gulp.src("src/img/**/*.{png,jpg,gif,svg}")
+  return gulp.src("src/img/**/*.{png,jpg,gif}")
   .pipe(imagemin([
      imagemin.optipng({optimizationLevel: 3}),
      imagemin.jpegtran({progressive: true})
    ]))
+   .pipe(gulp.dest("src/img"));
+});
+
+gulp.task("svgmin", function() {
+  return gulp.src("src/img/**/*.svg")
+  .pipe(svgmin())
+  .pipe(gulp.dest("src/img"));
+})
+
+gulp.task("symbols", function() {
+  return gulp.src("src/img/sprite/*.svg")
+   .pipe(svgmin())
+   .pipe(svgstore({
+     inlineSvg: true
+   }))
+   .pipe(rename("symbols.svg"))
    .pipe(gulp.dest("src/img"));
 });
 
