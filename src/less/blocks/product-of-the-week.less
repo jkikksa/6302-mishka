@@ -1,23 +1,23 @@
 .product-of-the-week {
+  position: relative;
   padding-top: 27px;
   padding-bottom: 43px;
-  position: relative;
 
   &::after {
     content: "";
     position: absolute;
+    bottom: 0;
     width: 100%;
     height: 7px;
     background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-size: contain;
-    bottom: 0;
   }
 
   @media (min-width: @screen-tablet) {
+    margin-bottom: 20px;
     padding-top: 34px;
     padding-bottom: 72px;
-    margin-bottom: 20px;
 
     &::after {
       height: 17px;

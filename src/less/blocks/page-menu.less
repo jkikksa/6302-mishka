@@ -1,6 +1,6 @@
 .page-menu {
-  background-color: @gray-98;
   position: relative;
+  background-color: @gray-98;
 
   @media (min-width: @screen-tablet) {
     padding-bottom: 13px;
@@ -8,13 +8,13 @@
     &::after {
       content: "";
       position: absolute;
+      bottom: 0;
+      z-index: 2;
       width: 100%;
       height: 24px;
       background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
       background-size: contain;
-      bottom: 0;
-      z-index: 2;
     }
   }
 

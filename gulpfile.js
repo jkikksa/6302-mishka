@@ -45,7 +45,7 @@ gulp.task("style", function() {
 gulp.task("csscomb", function() {
   return gulp.src("src/less/blocks/*.less")
     .pipe(csscomb())
-    .pipe(gulp.dest("src/less/blocks");
+    .pipe(gulp.dest("src/less/blocks"));
 });
 
 gulp.task("imagemin", function() {
