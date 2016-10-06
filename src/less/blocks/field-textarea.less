@@ -61,9 +61,6 @@
   resize: vertical;
   font-weight: 400;
 
-  @media (min-width: @screen-tablet) {
-    min-height: 141px;
-  }
 
   &:hover {
     border: 2px solid @aqua;
@@ -74,14 +71,23 @@
   }
 
   &::placeholder {
-    font-size: 19px;
-    line-height: 0.948em;
+    font-size: 17px;
+    line-height: 1.059em;
     color: @text-color;
     opacity: 0.3;
     font-weight: 400;
   }
 
   &--error {
-    border-bottom: 2px solid @lightred;
+    border: 2px solid @lightred;
+  }
+
+  @media (min-width: @screen-tablet) {
+    min-height: 141px;
+
+    &::placeholder {
+      font-size: 19px;
+      line-height: 0.948em;
+    }
   }
 }

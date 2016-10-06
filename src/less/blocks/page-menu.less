@@ -1,5 +1,30 @@
 .page-menu {
   background-color: @gray-98;
+  position: relative;
+
+  @media (min-width: @screen-tablet) {
+    padding-bottom: 13px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: @screen-desktop) {
+    padding-bottom: 17px;
+
+    &::after {
+      height: 34px;
+    }
+  }
 }
 
 .page-menu__inner {
@@ -38,6 +63,7 @@
   color: @text-color--light;
   text-decoration: none;
   background-repeat: no-repeat;
+  transition: transform 0.08s;
 
   @media (min-width: @screen-tablet) {
     padding-top: 28px;

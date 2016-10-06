@@ -3,15 +3,28 @@
   border-top: 1px solid @gray-87;
 
   @media (min-width: @screen-tablet) {
+    position: relative;
+    z-index: -1;
     margin-top: -61px;
-    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-fill.svg");
-    background-repeat: repeat-x;
-    background-position: left bottom;
-    background-size: 775px 23px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+      bottom: 0;
+      z-index: 2;
+    }
   }
 
   @media (min-width: @screen-desktop) {
-    background-size: 1150px 34px;
+
+    &::after {
+      height: 34px;
+    }
   }
 }
 

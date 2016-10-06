@@ -1,29 +1,37 @@
 .product-of-the-week {
   padding-top: 27px;
   padding-bottom: 43px;
-  background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
-  background-position: left bottom;
-  background-size: 320px 7px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    bottom: 0;
+  }
 
   @media (min-width: @screen-tablet) {
-    position: relative;
-    z-index: 2;
-    margin-top: -11px;
-    padding-top: 58px;
-    padding-bottom: 92px;
-    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-fill.svg"),
-    data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-line.svg");
-    background-position: left top, left bottom;
-    background-size: 775px 25px, 750px 60px;
+    padding-top: 34px;
+    padding-bottom: 72px;
+    margin-bottom: 20px;
+
+    &::after {
+      height: 17px;
+    }
   }
 
   @media (min-width: @screen-desktop) {
-    margin-top: -21px;
-    margin-bottom: 28px;
-    padding-top: 144px;
-    padding-bottom: 102px;
-    background-size: 1150px 40px, 1150px 34px;
+    margin-bottom: 34px;
+    padding-top: 106px;
+    padding-bottom: 96px;
+
+    &::after {
+      height: 23px;
+    }
   }
 }
 
