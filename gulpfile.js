@@ -16,6 +16,7 @@ var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
 var del = require("del");
 var runSequence = require("run-sequence");
+var csscomb = require("gulp-csscomb");
 
 gulp.task("style", function() {
   gulp.src("src/less/style.less")
@@ -38,6 +39,13 @@ gulp.task("style", function() {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
+});
+
+
+gulp.task("csscomb", function() {
+  return gulp.src("src/less/blocks/*.less")
+    .pipe(csscomb())
+    .pipe(gulp.dest("src/less/blocks");
 });
 
 gulp.task("imagemin", function() {
@@ -82,6 +90,7 @@ gulp.task("copy", function() {
   return gulp.src([
     "src/fonts/**/*.{woff,woff2}",
     "src/*.html",
+    "src/js/libs/*.js",
     "src/img/*.*"
   ], { base: "src"})
   .pipe(gulp.dest("build"));
