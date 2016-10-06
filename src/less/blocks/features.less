@@ -1,0 +1,146 @@
+.features {
+  margin-bottom: 10px;
+  padding-top: 27px;
+  padding-bottom: 20px;
+}
+
+.features__inner {
+  .container();
+
+  @media (min-width: @screen-desktop) {
+    width: 700px;
+    padding-right: 175px;
+    padding-left: 175px;
+  }
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.2em;
+  color: @text-color--dark;
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 43px;
+    font-size: 43px;
+    line-height: 1.163em;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 43px;
+    font-size: 53px;
+    line-height: 1.075em;
+  }
+}
+
+.features__list {
+  .style-reset();
+
+  @media (min-width: @screen-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.features__list-item {
+  position: relative;
+  margin-bottom: 23px;
+  padding-top: 60px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.2em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/sprite.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @screen-tablet) {
+    width: 304px;
+    margin-bottom: 46px;
+    padding-right: 30px;
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 320px;
+  }
+
+  &--flower {
+    order: 1;
+
+    &::before {
+      top: 5px;
+      left: 10px;
+      width: 32px;
+      height: 39px;
+      background-position: 20.498565% 31.308620%;
+    }
+  }
+
+  &--money {
+    order: 3;
+
+    &::before {
+      top: 5px;
+      left: 0;
+      width: 47px;
+      height: 28px;
+      background-position: 46.961146% 56.298674%;
+    }
+  }
+
+  &--heart {
+    order: 5;
+
+    &::before {
+      top: 10px;
+      left: 7px;
+      width: 33px;
+      height: 28px;
+      background-position: 36.846722% 49.067841%;
+    }
+  }
+
+  &--clew {
+    order: 2;
+
+    &::before {
+      top: 7px;
+      left: 3px;
+      width: 34px;
+      height: 34px;
+      background-position: 11.820122% 21.772204%;
+    }
+  }
+
+  &--rocket {
+    order: 4;
+
+    &::before {
+      top: 9px;
+      left: -7px;
+      width: 54px;
+      height: 23px;
+      background-position: 60.342363% 62.916272%;
+    }
+  }
+
+  &--gift {
+    order: 6;
+
+    &::before {
+      top: 6px;
+      left: 3px;
+      width: 33px;
+      height: 33px;
+      background-position: 28.547531% 40.949608%;
+    }
+  }
+}

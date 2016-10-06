@@ -1,0 +1,43 @@
+.social-link {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+
+  svg {
+    position: absolute;
+  }
+
+  &:hover {
+    fill: @lightaqua;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--instagram {
+
+    svg {
+      top: 15px;
+      left: 16px;
+    }
+  }
+
+  &--facebook {
+
+    svg {
+      top: 11px;
+      left: 19px;
+    }
+  }
+
+  &--twitter {
+
+    svg {
+      top: 15px;
+      left: 15px;
+    }
+  }
+}

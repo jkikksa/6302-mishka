@@ -1,0 +1,193 @@
+.product-of-the-week {
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 43px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+    background-image: data-uri("image/svg+xml;charset=UTF-8", "../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: 350px;
+  }
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 20px;
+    padding-top: 34px;
+    padding-bottom: 72px;
+
+    &::after {
+      height: 17px;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 34px;
+    padding-top: 106px;
+    padding-bottom: 96px;
+
+    &::after {
+      height: 23px;
+    }
+  }
+}
+
+.product-of-the-week__inner {
+  .container();
+  position: relative;
+
+  @media (min-width: @screen-desktop) {
+    width: 875px;
+    padding-left: 175px;
+  }
+}
+
+.product-of-the-week__content-wrapper {
+  position: relative;
+
+  @media (min-width: @screen-tablet) {
+    padding-right: 378px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    padding-right: 585px;
+  }
+}
+
+.product-of-the-week__title {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.2em;
+  color: @text-color--dark;
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 49px;
+    font-size: 43px;
+    line-height: 1.163em;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 50px;
+    font-size: 53px;
+    line-height: 1.075em;
+    text-align: left;
+  }
+}
+
+.product-of-the-week__marker {
+  margin-bottom: 27px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.941em;
+  color: @aqua;
+  text-transform: uppercase;
+
+  @media (min-width: @screen-tablet) {
+    position: absolute;
+    top: 12px;
+    right: 22px;
+    width: 80px;
+    text-align: center;
+  }
+
+  @media (min-width: @screen-desktop) {
+    top: 15px;
+    left: 42px;
+  }
+}
+
+.product-of-the-week__description {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.6em;
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 35px;
+    font-size: 17px;
+    line-height: 1.765;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 48px;
+  }
+}
+
+.product-of-the-week__table {
+  width: 100%;
+  margin-bottom: 28px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.333em;
+
+  tr {
+    border-bottom: 1px solid @gray-93;
+  }
+
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media (min-width: @screen-desktop) {
+      padding-top: 9px;
+      padding-bottom: 11px;
+    }
+  }
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: @screen-desktop) {
+    margin-bottom: 109px;
+  }
+}
+
+.product-of-the-week__table-parameter {
+  width: 96px;
+}
+
+.product-of-the-week__product-image {
+  margin-bottom: 25px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: @screen-tablet) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 333px;
+    height: 404px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @screen-desktop) {
+    z-index: -1;
+    width: 525px;
+    height: 636px;
+  }
+}
+
+.product-of-the-week__product-price {
+  margin-bottom: 26px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.411em;
+  text-align: center;
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 35px;
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+}
